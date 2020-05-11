@@ -278,12 +278,8 @@ textarea.input {
   background: #cc2127 !important;
 }
 
-.social-linkedin {
-  background: #4875B4
-}
-
 .social-instagram {
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%) !important;
+  background: #d341b2 !important;
 }
 
 /*=========================================================
@@ -680,7 +676,7 @@ textarea.input {
 .page-header {
   position: relative;
   margin: 0;
-  padding-top: 100px;
+  padding-top: 120px;
   padding-bottom: 80px;
   background-color: #1b1c1e;
 }
@@ -1206,13 +1202,13 @@ textarea.input {
 
 .social-widget ul li {
   float: left;
-  width: 25%;
+  width: 33.33%;
 }
 
 .social-widget ul li a {
   display: block;
   text-align: center;
-  padding: 20px 15px;
+  padding: 30px 15px;
   color: #fff;
   -webkit-transition: 0.2s opacity;
   transition: 0.2s opacity;
