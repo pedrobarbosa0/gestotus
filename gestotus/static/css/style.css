@@ -320,6 +320,8 @@ textarea.input {
 
 #nav-top>.container {
   position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 #nav-bottom {
@@ -577,7 +579,7 @@ textarea.input {
 #nav-aside {
   position: fixed;
   right: 0;
-  top: 0;
+  top: 100px;
   bottom: 0;
   background-color: #1b1c1e;
   max-width: 360px;
@@ -680,7 +682,7 @@ textarea.input {
 .page-header {
   position: relative;
   margin: 0;
-  padding-top: 100px;
+  padding-top: 70px;
   padding-bottom: 80px;
   background-color: #1b1c1e;
 }
