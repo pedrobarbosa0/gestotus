@@ -9,7 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-	<title>GESTOPUS - CONSULTORIAS</title>
+	<title>GESTOTUS - CONSULTORIAS E TREINAMENTOS</title>
 
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CMuli:400,700" rel="stylesheet">
@@ -42,16 +42,16 @@
 				<div class="container">
 					<!-- social -->
 					<ul class="nav-social">
-						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-						<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+						<li><a href="https://www.facebook.com/gestotusconsultoria" target="_blank"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="https://twitter.com/gestotus" target="_blank"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="https://www.linkedin.com/company/gestotus-consultoria/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+						<li><a href="https://www.instagram.com/gestotus/?hl=pt-br" target="_blank"><i class="fa fa-instagram"></i></a></li>
 					</ul>
 					<!-- /social -->
 
 					<!-- logo -->
 					<div class="nav-logo">
-						<a href="{% url 'home' %}"><img src="{% static 'img/logo_principal.jpg' %}" height="70" width="149" alt=""></a>
+						<a href="{% url 'home' %}"><img src="./img/logo_principal.jpg" height="70" width="149" alt=""></a>
 					</div>
 					<!-- /logo -->
 
@@ -89,7 +89,6 @@
 										<li><a href="{% url 'author' %}">Author page</a></li>
 										<li><a href="{% url 'about' %}">Quem Somos</a></li>
 										<li><a href="{% url 'contact' %}">Contato</a></li>
-										<li><a href="blank.html">Regular</a></li>
 									</ul>
 								</div>
 							</div>-->
@@ -295,7 +294,7 @@
 					<li><a href="#">Artigos</a></li>
 					<li><a href="{% url 'about' %}">Quem Somos</a></li>
 					<li><a href="{% url 'contact' %}">Contato</a></li>
-					
+
 
 				</ul>
 				<button class="nav-close nav-aside-close"><span></span></button>
@@ -303,6 +302,10 @@
 			<!-- /Aside Nav -->
 		</div>
 		<!-- /NAV -->
+
+		{% block pageheader %}
+		{% endblock %}
+
 	</header>
 	<!-- /HEADER -->
 
@@ -318,63 +321,58 @@
 				<div class="col-md-3">
 					<div class="footer-widget">
 						<div class="footer-logo">
-							<a href="{% url 'home' %}" class="logo"><img src="{% static 'img/logo-alt.png' %}" alt=""></a>
+							<a href="{% url 'home' %}"><img src="./img/logog_semfundo.png" height="100" width="250" alt=""></a>
 						</div>
 						<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in mollis nunc sed. Nunc non blandit massa enim nec.</p>
 						<ul class="contact-social">
-							<li><a href="#" class="social-facebook"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#" class="social-twitter"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#" class="social-google-plus"><i class="fa fa-google-plus"></i></a></li>
-							<li><a href="#" class="social-instagram"><i class="fa fa-instagram"></i></a></li>
+							<li><a href="https://www.facebook.com/gestotusconsultoria" target="_blank" class="social-facebook"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="https://twitter.com/gestotus" target="_blank" class="social-twitter"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="https://www.linkedin.com/company/gestotus-consultoria/" target="_blank" class="social-linkedin"><i class="fa fa-linkedin"></i></a></li>
+							<li><a href="https://www.instagram.com/gestotus/?hl=pt-br" target="_blank" class="social-instagram"><i class="fa fa-instagram"></i></a></li>
 						</ul>
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-5">
 					<div class="footer-widget">
 						<h3 class="footer-title">Serviços</h3>
-						<!--<div class="category-widget">
+						<div class="category-widget">
 							<ul>
-								<li><a href="#">Lifestyle <span>451</span></a></li>
-								<li><a href="#">Fashion <span>230</span></a></li>
-								<li><a href="#">Technology <span>40</span></a></li>
-								<li><a href="#">Travel <span>38</span></a></li>
-								<li><a href="#">Health <span>24</span></a></li>
+								<li><a href="#">Consultoria em Convênio<span></span></a></li>
+								<li><a href="#">Consultoria em Gestão de Projetos<span></span></a></li>
+								<li><a href="#">Consultoria de Licitações e Contratos<span></span></a></li>
+								<li><a href="#">Consultoria em Compliance e ética empresarial<span></span></a></li>
+								<li><a href="#">Modelagem de negócios Locais<span></span></a></li>
 							</ul>
-						</div>-->
+						</div>
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-4">
 					<div class="footer-widget">
 						<h3 class="footer-title">Tags</h3>
 						<div class="tags-widget">
 							<ul>
-								<li><a href="#">Social</a></li>
-								<li><a href="#">Lifestyle</a></li>
-								<li><a href="#">Blog</a></li>
-								<li><a href="#">Travel</a></li>
-								<li><a href="#">Technology</a></li>
-								<li><a href="#">Fashion</a></li>
-								<li><a href="#">Life</a></li>
-								<li><a href="#">News</a></li>
-								<li><a href="#">Magazine</a></li>
-								<li><a href="#">Food</a></li>
-								<li><a href="#">Health</a></li>
+								<li><a href="#">Consultoria</a></li>
+								<li><a href="#">Licitações e Contratos</a></li>
+								<li><a href="#">Modelagem de negócios Locais</a></li>
+								<li><a href="#">Gestão de projetos</a></li>
+								<li><a href="#">Plano de Negócio</a></li>
+								<li><a href="#">Gestão de contrato</a></li>
 							</ul>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3">
+				<!--<div class="col-md-3">
 					<div class="footer-widget">
 						<h3 class="footer-title">Newsletter</h3>
 						<div class="newsletter-widget">
 							<form>
 								<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium.</p>
-								<input class="input" name="newsletter" placeholder="Enter Your Email">
-								<button class="primary-button">Subscribe</button>
+								<input class="input" name="newsletter" placeholder="Digite Seu Email">
+								<button class="primary-button">Inscreva-se</button>
 							</form>
 						</div>
 					</div>
-				</div>
+				</div>-->
 			</div>
 			<!-- /row -->
 
@@ -383,8 +381,8 @@
 				<div class="col-md-6 col-md-push-6">
 					<ul class="footer-nav">
 						<li><a href="{% url 'home' %}">Início</a></li>
-						<li><a href="#">Serviços</a></li>
-						<li><a href="#">Notícias</a></li>
+						<li><a href="{% url 'category' %}">Serviços</a></li>
+						<li><a href="{% url 'author' %}">Notícias</a></li>
 						<li><a href="{% url 'blog_post' %}">Artigos</a></li>
 						<li><a href="{% url 'about' %}">Quem Somos</a></li>
 						<li><a href="{% url 'contact' %}">Contato</a></li>

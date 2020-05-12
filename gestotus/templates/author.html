@@ -1,5 +1,29 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block pageheader %}
+<!-- PAGE HEADER -->
+<div class="page-header">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-offset-1 col-md-10 text-center">
+				<div class="author">
+					<img class="author-img center-block" src="./img/avatar-1.jpg" alt="">
+					<h1 class="text-uppercase">John Doe</h1>
+					<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<ul class="author-social">
+						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+						<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /PAGE HEADER -->
+{% endblock %}
+
 {% block content %}
 
 	<!-- SECTION -->
