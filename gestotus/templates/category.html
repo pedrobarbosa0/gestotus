@@ -1,5 +1,20 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block pageheader %}
+<!-- PAGE HEADER -->
+<div class="page-header">
+	<div class="page-header-bg" style="background-image: url('./img/header-2.jpg');" data-stellar-background-ratio="0.5"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-offset-1 col-md-10 text-center">
+				<h1 class="text-uppercase">Lifestyle</h1>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /PAGE HEADER -->
+{% endblock %}
+
 {% block content %}
 
 	<!-- SECTION -->
@@ -11,7 +26,7 @@
 				<div class="col-md-8">
 					<!-- post -->
 					<div class="post post-thumb">
-						<a class="post-img" href="{% url 'blog_post' %}"><img src="./img/hot-post-3.jpg" alt=""></a>
+						<a class="post-img" href="{% url 'blog_post' %}"><img src="{% static 'img/hot-post-3.jpg' %}" alt=""></a>
 						<div class="post-body">
 							<div class="post-category">
 								<a href="{% url 'category' %}">Fashion</a>
@@ -30,7 +45,7 @@
 						<!-- post -->
 						<div class="col-md-6">
 							<div class="post">
-								<a class="post-img" href="{% url 'blog_post' %}"><img src="./img/post-3.jpg" alt=""></a>
+								<a class="post-img" href="{% url 'blog_post' %}"><img src="{% static 'img/post-3.jpg' %}" alt=""></a>
 								<div class="post-body">
 									<div class="post-category">
 										<a href="{% url 'category' %}">Lifestyle</a>
@@ -48,7 +63,7 @@
 						<!-- post -->
 						<div class="col-md-6">
 							<div class="post">
-								<a class="post-img" href="{% url 'blog_post' %}"><img src="./img/post-5.jpg" alt=""></a>
+								<a class="post-img" href="{% url 'blog_post' %}"><img src="{% static 'img/post-5.jpg' %}" alt=""></a>
 								<div class="post-body">
 									<div class="post-category">
 										<a href="{% url 'category' %}">Lifestyle</a>
@@ -68,7 +83,7 @@
 						<!-- post -->
 						<div class="col-md-6">
 							<div class="post">
-								<a class="post-img" href="{% url 'blog_post' %}"><img src="./img/post-9.jpg" alt=""></a>
+								<a class="post-img" href="{% url 'blog_post' %}"><img src="{% static 'img/post-9.jpg' %}" alt=""></a>
 								<div class="post-body">
 									<div class="post-category">
 										<a href="{% url 'category' %}">Lifestyle</a>
@@ -86,7 +101,7 @@
 						<!-- post -->
 						<div class="col-md-6">
 							<div class="post">
-								<a class="post-img" href="{% url 'blog_post' %}"><img src="./img/post-7.jpg" alt=""></a>
+								<a class="post-img" href="{% url 'blog_post' %}"><img src="{% static 'img/post-7.jpg' %}" alt=""></a>
 								<div class="post-body">
 									<div class="post-category">
 										<a href="{% url 'category' %}">Health</a>
@@ -105,7 +120,7 @@
 
 					<!-- post -->
 					<div class="post post-row">
-						<a class="post-img" href="{% url 'blog_post' %}"><img src="./img/post-13.jpg" alt=""></a>
+						<a class="post-img" href="{% url 'blog_post' %}"><img src="{% static 'img/post-13.jpg' %}" alt=""></a>
 						<div class="post-body">
 							<div class="post-category">
 								<a href="{% url 'category' %}">Travel</a>
@@ -123,7 +138,7 @@
 
 					<!-- post -->
 					<div class="post post-row">
-						<a class="post-img" href="{% url 'blog_post' %}"><img src="./img/post-6.jpg" alt=""></a>
+						<a class="post-img" href="{% url 'blog_post' %}"><img src="{% static 'img/post-6.jpg' %}" alt=""></a>
 						<div class="post-body">
 							<div class="post-category">
 								<a href="{% url 'category' %}">Fashion</a>
@@ -141,7 +156,7 @@
 
 					<!-- post -->
 					<div class="post post-row">
-						<a class="post-img" href="{% url 'blog_post' %}"><img src="./img/post-8.jpg" alt=""></a>
+						<a class="post-img" href="{% url 'blog_post' %}"><img src="{% static 'img/post-8.jpg' %}" alt=""></a>
 						<div class="post-body">
 							<div class="post-category">
 								<a href="{% url 'category' %}">Fashion</a>
@@ -159,7 +174,7 @@
 
 					<!-- post -->
 					<div class="post post-row">
-						<a class="post-img" href="{% url 'blog_post' %}"><img src="./img/post-12.jpg" alt=""></a>
+						<a class="post-img" href="{% url 'blog_post' %}"><img src="{% static 'img/post-12.jpg' %}" alt=""></a>
 						<div class="post-body">
 							<div class="post-category">
 								<a href="{% url 'category' %}">Lifestyle</a>
@@ -176,7 +191,7 @@
 
 					<!-- post -->
 					<div class="post post-row">
-						<a class="post-img" href="{% url 'blog_post' %}"><img src="./img/post-7.jpg" alt=""></a>
+						<a class="post-img" href="{% url 'blog_post' %}"><img src="{% static 'img/post-7.jpg' %}" alt=""></a>
 						<div class="post-body">
 							<div class="post-category">
 								<a href="{% url 'category' %}">Health</a>
@@ -201,7 +216,7 @@
 					<!-- ad widget-->
 					<div class="aside-widget text-center">
 						<a href="#" style="display: inline-block;margin: auto;">
-							<img class="img-responsive" src="./img/ad-3.jpg" alt="">
+							<img class="img-responsive" src="{% static 'img/ad-3.jpg' %}" alt="">
 						</a>
 					</div>
 					<!-- /ad widget -->
@@ -275,7 +290,7 @@
 						</div>
 						<!-- post -->
 						<div class="post post-widget">
-							<a class="post-img" href="{% url 'blog_post' %}"><img src="./img/widget-3.jpg" alt=""></a>
+							<a class="post-img" href="{% url 'blog_post' %}"><img src="{% static 'img/widget-3.jpg' %}" alt=""></a>
 							<div class="post-body">
 								<div class="post-category">
 									<a href="{% url 'category' %}">Lifestyle</a>
@@ -287,7 +302,7 @@
 
 						<!-- post -->
 						<div class="post post-widget">
-							<a class="post-img" href="{% url 'blog_post' %}"><img src="./img/widget-2.jpg" alt=""></a>
+							<a class="post-img" href="{% url 'blog_post' %}"><img src="{% static 'img/widget-2.jpg' %}" alt=""></a>
 							<div class="post-body">
 								<div class="post-category">
 									<a href="{% url 'category' %}">Technology</a>
@@ -300,7 +315,7 @@
 
 						<!-- post -->
 						<div class="post post-widget">
-							<a class="post-img" href="{% url 'blog_post' %}"><img src="./img/widget-4.jpg" alt=""></a>
+							<a class="post-img" href="{% url 'blog_post' %}"><img src="{% static 'img/widget-4.jpg' %}" alt=""></a>
 							<div class="post-body">
 								<div class="post-category">
 									<a href="{% url 'category' %}">Health</a>
@@ -312,7 +327,7 @@
 
 						<!-- post -->
 						<div class="post post-widget">
-							<a class="post-img" href="{% url 'blog_post' %}"><img src="./img/widget-5.jpg" alt=""></a>
+							<a class="post-img" href="{% url 'blog_post' %}"><img src="{% static 'img/widget-5.jpg' %}" alt=""></a>
 							<div class="post-body">
 								<div class="post-category">
 									<a href="{% url 'category' %}">Health</a>
@@ -332,12 +347,12 @@
 						</div>
 						<div class="galery-widget">
 							<ul>
-								<li><a href="#"><img src="./img/galery-1.jpg" alt=""></a></li>
-								<li><a href="#"><img src="./img/galery-2.jpg" alt=""></a></li>
-								<li><a href="#"><img src="./img/galery-3.jpg" alt=""></a></li>
-								<li><a href="#"><img src="./img/galery-4.jpg" alt=""></a></li>
-								<li><a href="#"><img src="./img/galery-5.jpg" alt=""></a></li>
-								<li><a href="#"><img src="./img/galery-6.jpg" alt=""></a></li>
+								<li><a href="#"><img src="{% static 'img/galery-1.jpg' %}" alt=""></a></li>
+								<li><a href="#"><img src="{% static 'img/galery-2.jpg' %}" alt=""></a></li>
+								<li><a href="#"><img src="{% static 'img/galery-3.jpg' %}" alt=""></a></li>
+								<li><a href="#"><img src="{% static 'img/galery-4.jpg' %}" alt=""></a></li>
+								<li><a href="#"><img src="{% static 'img/galery-5.jpg' %}" alt=""></a></li>
+								<li><a href="#"><img src="{% static 'img/galery-6.jpg' %}" alt=""></a></li>
 							</ul>
 						</div>
 					</div>
@@ -346,7 +361,7 @@
 					<!-- Ad widget -->
 					<div class="aside-widget text-center">
 						<a href="#" style="display: inline-block;margin: auto;">
-							<img class="img-responsive" src="./img/ad-1.jpg" alt="">
+							<img class="img-responsive" src="{% static 'img/ad-1.jpg' %}" alt="">
 						</a>
 					</div>
 					<!-- /Ad widget -->

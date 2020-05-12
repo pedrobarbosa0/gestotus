@@ -3,11 +3,11 @@ Template Name: Callie HTML Template
 Author: yaminncco
 
 Colors:
-	Body 		  : #505050
-	Headers 	: #11151c
-	Primary 	: #8D2629
-	Dark 		  : #1b1c1e
-	Grey 		  : #e8eaed #97989b #323335
+  Body      : #505050
+  Headers   : #11151c
+  Primary   : #8D2629
+  Dark      : #1b1c1e
+  Grey      : #e8eaed #97989b #323335
 
 Fonts: Montserrat & Muli
 
@@ -24,11 +24,11 @@ RESPONSIVE
 ------------------------------------*/
 
 /*=========================================================
-	GENERAL
+  GENERAL
 ===========================================================*/
 
 /*----------------------------*\
-	typography
+  typography
 \*----------------------------*/
 
 body {
@@ -160,7 +160,7 @@ figure>figcaption {
 }
 
 /*----------------------------*\
-	section
+  section
 \*----------------------------*/
 
 .section {
@@ -201,7 +201,7 @@ figure>figcaption {
 }
 
 /*----------------------------*\
-	input
+  input
 \*----------------------------*/
 
 .input {
@@ -219,7 +219,7 @@ textarea.input {
 }
 
 /*----------------------------*\
-	button
+  button
 \*----------------------------*/
 
 .primary-button, .secondary-button {
@@ -259,7 +259,7 @@ textarea.input {
 }
 
 /*----------------------------*\
-	social colors
+  social colors
 \*----------------------------*/
 
 .social-facebook {
@@ -278,12 +278,16 @@ textarea.input {
   background: #cc2127 !important;
 }
 
+.social-linkedin {
+  background: #4875B4
+}
+
 .social-instagram {
-  background: #d341b2 !important;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%) !important;
 }
 
 /*=========================================================
-	NAVIGATION
+  NAVIGATION
 ===========================================================*/
 
 #nav {
@@ -323,7 +327,7 @@ textarea.input {
 }
 
 /*----------------------------*\
-	social
+  social
 \*----------------------------*/
 
 .nav-social {
@@ -342,7 +346,7 @@ textarea.input {
 }
 
 /*----------------------------*\
-	logo
+  logo
 \*----------------------------*/
 
 .nav-logo {
@@ -365,7 +369,7 @@ textarea.input {
 }
 
 /*----------------------------*\
-	search
+  search
 \*----------------------------*/
 
 .nav-btns {
@@ -418,7 +422,7 @@ textarea.input {
 }
 
 /*----------------------------*\
-	menu
+  menu
 \*----------------------------*/
 
 .nav-menu {
@@ -441,7 +445,7 @@ textarea.input {
 }
 
 /*----------------------------*\
-	dropdown
+  dropdown
 \*----------------------------*/
 
 .nav-menu li.has-dropdown {
@@ -503,7 +507,7 @@ textarea.input {
 }
 
 /*----------------------------*\
-	mega dropdown
+  mega dropdown
 \*----------------------------*/
 
 .nav-menu li.has-dropdown.megamenu {
@@ -528,7 +532,7 @@ textarea.input {
 }
 
 /*----------------------------*\
-	tab dropdown
+  tab dropdown
 \*----------------------------*/
 
 .nav-menu li.has-dropdown.megamenu>.dropdown.tab-dropdown .tab-content {
@@ -567,7 +571,7 @@ textarea.input {
 }
 
 /*----------------------------*\
-	nav aside
+  nav aside
 \*----------------------------*/
 
 #nav-aside {
@@ -670,13 +674,13 @@ textarea.input {
 }
 
 /*=========================================================
-	PAGE HEADER
+  PAGE HEADER
 ===========================================================*/
 
 .page-header {
   position: relative;
   margin: 0;
-  padding-top: 120px;
+  padding-top: 100px;
   padding-bottom: 80px;
   background-color: #1b1c1e;
 }
@@ -716,7 +720,7 @@ textarea.input {
 }
 
 /*=========================================================
-	POST
+  POST
 ===========================================================*/
 
 .post {
@@ -815,7 +819,7 @@ textarea.input {
 }
 
 /*----------------------------*\
-	hot post
+  hot post
 \*----------------------------*/
 
 .hot-post {
@@ -841,7 +845,7 @@ textarea.input {
 }
 
 /*----------------------------*\
-	post thumb
+  post thumb
 \*----------------------------*/
 
 .post.post-thumb .post-img:after {
@@ -885,7 +889,7 @@ textarea.input {
 }
 
 /*----------------------------*\
-	post small
+  post small
 \*----------------------------*/
 
 .post.post-sm .post-body {
@@ -895,7 +899,7 @@ textarea.input {
 }
 
 /*----------------------------*\
-	post widget
+  post widget
 \*----------------------------*/
 
 .post.post-widget:after {
@@ -922,7 +926,7 @@ textarea.input {
 }
 
 /*----------------------------*\
-	post row
+  post row
 \*----------------------------*/
 
 .post.post-row:after {
@@ -942,7 +946,7 @@ textarea.input {
 }
 
 /*=========================================================
-	POST PAGE
+  POST PAGE
 ===========================================================*/
 
 .page-header .post-category {
@@ -1024,7 +1028,7 @@ textarea.input {
 }
 
 /*----------------------------*\
-	post nav
+  post nav
 \*----------------------------*/
 
 .post-nav:after {
@@ -1081,7 +1085,7 @@ textarea.input {
 }
 
 /*----------------------------*\
-	author
+  author
 \*----------------------------*/
 
 .author.media .media-left {
@@ -1114,7 +1118,7 @@ textarea.input {
 }
 
 /*----------------------------*\
-	comments
+  comments
 \*----------------------------*/
 
 .post-comments .media {
@@ -1185,7 +1189,7 @@ textarea.input {
 }
 
 /*=========================================================
-	ASIDE
+  ASIDE
 ===========================================================*/
 
 .aside-widget {
@@ -1193,7 +1197,7 @@ textarea.input {
 }
 
 /*----------------------------*\
-	social widget
+  social widget
 \*----------------------------*/
 
 .social-widget ul {
@@ -1202,13 +1206,13 @@ textarea.input {
 
 .social-widget ul li {
   float: left;
-  width: 33.33%;
+  width: 25%;
 }
 
 .social-widget ul li a {
   display: block;
   text-align: center;
-  padding: 30px 15px;
+  padding: 20px 15px;
   color: #fff;
   -webkit-transition: 0.2s opacity;
   transition: 0.2s opacity;
@@ -1230,7 +1234,7 @@ textarea.input {
 }
 
 /*----------------------------*\
-	newsletter widget
+  newsletter widget
 \*----------------------------*/
 
 .newsletter-widget {
@@ -1276,7 +1280,7 @@ textarea.input {
 }
 
 /*----------------------------*\
-	category widget
+  category widget
 \*----------------------------*/
 
 .category-widget ul li {
@@ -1302,7 +1306,7 @@ textarea.input {
 }
 
 /*----------------------------*\
-	tags widget
+  tags widget
 \*----------------------------*/
 
 .tags-widget ul li {
@@ -1330,7 +1334,7 @@ textarea.input {
 }
 
 /*----------------------------*\
-	galery widget
+  galery widget
 \*----------------------------*/
 
 .galery-widget ul {
@@ -1364,7 +1368,7 @@ textarea.input {
 }
 
 /*=========================================================
-	FOOTER
+  FOOTER
 ===========================================================*/
 
 #footer {
@@ -1422,7 +1426,7 @@ textarea.input {
 }
 
 /*----------------------------*\
-	CONTACT
+  CONTACT
 \*----------------------------*/
 
 .contact li {
@@ -1477,7 +1481,7 @@ textarea.input {
 }
 
 /*=========================================================
-	RESPONSIVE
+  RESPONSIVE
 ===========================================================*/
 
 @media only screen and (max-width: 991px) {

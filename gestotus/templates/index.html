@@ -10,7 +10,7 @@
 				<div class="col-md-8 hot-post-left">
 					<!-- post -->
 					<div class="post post-thumb">
-						<a class="post-img" href="{% url 'blog_post' %}"><img src="{% static 'img/hot-post-1.jpg' %}" alt=""></a>
+						<a class="post-img" href="{% url 'blog_post' %}"><img src="./img/hot-post-1.jpg" alt=""></a>
 						<div class="post-body">
 							<div class="post-category">
 								<a href="{% url 'category' %}">Lifestyle</a>
@@ -27,7 +27,7 @@
 				<div class="col-md-4 hot-post-right">
 					<!-- post -->
 					<div class="post post-thumb">
-						<a class="post-img" href="{% url 'blog_post' %}"><img src="{% static 'img/hot-post-2.jpg' %}" alt=""></a>
+						<a class="post-img" href="{% url 'blog_post' %}"><img src="./img/hot-post-2.jpg" alt=""></a>
 						<div class="post-body">
 							<div class="post-category">
 								<a href="{% url 'category' %}">Lifestyle</a>
@@ -43,7 +43,7 @@
 
 					<!-- post -->
 					<div class="post post-thumb">
-						<a class="post-img" href="{% url 'blog_post' %}"><img src="{% static 'img/hot-post-3.jpg' %}" alt=""></a>
+						<a class="post-img" href="{% url 'blog_post' %}"><img src="./img/hot-post-3.jpg" alt=""></a>
 						<div class="post-body">
 							<div class="post-category">
 								<a href="{% url 'category' %}">Fashion</a>
@@ -365,21 +365,23 @@
 						<div class="social-widget">
 							<ul>
 								<li>
-									<a href="#" class="social-facebook">
+									<a href="https://www.facebook.com/gestotusconsultoria" target="_blank" class="social-facebook">
 										<i class="fa fa-facebook"></i>
-										<span>21.2K<br>Followers</span>
 									</a>
 								</li>
 								<li>
-									<a href="#" class="social-twitter">
-										<i class="fa fa-twitter"></i>
-										<span>10.2K<br>Followers</span>
+									<a href="https://twitter.com/gestotus" target="_blank" class="social-twitter">
+										<i class="fa fa-twitter"></i>	
 									</a>
 								</li>
 								<li>
-									<a href="#" class="social-google-plus">
-										<i class="fa fa-google-plus"></i>
-										<span>5K<br>Followers</span>
+									<a href="https://www.instagram.com/gestotus/?hl=pt-br" target="_blank" class="social-linkedin">
+										<i class="fa fa-linkedin"></i>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.instagram.com/gestotus/?hl=pt-br" target="_blank" class="social-instagram">
+										<i class="fa fa-instagram"></i>
 									</a>
 								</li>
 							</ul>
@@ -391,6 +393,15 @@
 					<div class="aside-widget">
 						<div class="section-title">
 							<h2 class="title">Serviços</h2>
+						</div>
+						<div class="category-widget">
+							<ul>
+								<li><a href="#">Consultoria em Convênio<span></span></a></li>
+								<li><a href="#">Consultoria em Gestão de Projetos<span></span></a></li>
+								<li><a href="#">Consultoria de Licitações e Contratos<span></span></a></li>
+								<li><a href="#">Consultoria em Compliance e ética empresarial<span></span></a></li>
+								<li><a href="#">Modelagem de negócios Locais<span></span></a></li>
+							</ul>
 						</div>
 						<!--<div class="category-widget">
 							<ul>
@@ -405,7 +416,7 @@
 					<!-- /category widget -->
 
 					<!-- newsletter widget -->
-					<div class="aside-widget">
+					<!--<div class="aside-widget">
 						<div class="section-title">
 							<h2 class="title">Newsletter</h2>
 						</div>
@@ -416,7 +427,7 @@
 								<button class="primary-button">Subscribe</button>
 							</form>
 						</div>
-					</div>
+					</div>-->
 					<!-- /newsletter widget -->
 
 					<!-- post widget -->
