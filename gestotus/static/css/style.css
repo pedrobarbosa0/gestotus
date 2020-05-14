@@ -326,6 +326,7 @@ textarea.input {
 
 #nav-bottom {
   border-top: 1px solid #e8eaed;
+  background-color: #800000;
 }
 
 /*----------------------------*\
@@ -444,6 +445,7 @@ textarea.input {
   line-height: 20px;
   font-weight: 700;
   text-transform: uppercase;
+  color: #e8eaed;
 }
 
 /*----------------------------*\
