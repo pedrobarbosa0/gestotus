@@ -1549,3 +1549,15 @@ textarea.input {
     display: inline;
   }
 }
+
+#img-principal {
+  width: 100%;
+  height: 71vh;
+} 
+
+@media (max-width: 500px){
+  #img-principal {
+    height: 45vh;
+  } 
+}
+
