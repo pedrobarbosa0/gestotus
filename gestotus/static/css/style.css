@@ -5,7 +5,7 @@ Author: yaminncco
 Colors:
   Body      : #505050
   Headers   : #11151c
-  Primary   : #8D2629
+  Primary   : #1f3864
   Dark      : #1b1c1e
   Grey      : #e8eaed #97989b #323335
 
@@ -75,18 +75,18 @@ a {
 }
 
 a:hover, a:focus {
-  color: #8D2629;
+  color: #1f3864;
   text-decoration: none;
   outline: none;
 }
 
 ::-moz-selection {
-  background-color: #8D2629;
+  background-color: #1f3864;
   color: #FFF;
 }
 
 ::selection {
-  background-color: #8D2629;
+  background-color: #1f3864;
   color: #FFF;
 }
 
@@ -123,7 +123,7 @@ blockquote.blockquote:before {
   line-height: 70px;
   text-align: center;
   border-radius: 50%;
-  color: #8D2629;
+  color: #1f3864;
   font-size: 30px;
   background: #fff;
   border: 2px solid #e8eaed;
@@ -235,10 +235,10 @@ textarea.input {
 }
 
 .primary-button {
-  background-color: #8D2629;
+  background-color: #1f3864;
   color: #fff;
-  -webkit-box-shadow: 0px 0px 0px 2px #8D2629 inset;
-  box-shadow: 0px 0px 0px 2px #8D2629 inset;
+  -webkit-box-shadow: 0px 0px 0px 2px #1f3864 inset;
+  box-shadow: 0px 0px 0px 2px #1f3864 inset;
 }
 
 .secondary-button {
@@ -250,7 +250,7 @@ textarea.input {
 
 .primary-button:hover, .primary-button:focus {
   background-color: transparent;
-  color: #8D2629;
+  color: #1f3864;
 }
 
 .secondary-button:hover, .secondary-button:focus {
@@ -326,7 +326,7 @@ textarea.input {
 
 #nav-bottom {
   border-top: 1px solid #e8eaed;
-  background-color: #800000;
+  background-color: #1f3864;
 }
 
 /*----------------------------*\
@@ -489,7 +489,7 @@ textarea.input {
   background-color: #fff;
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-  border-top: 2px solid #8D2629;
+  border-top: 2px solid #1f3864;
 }
 
 .dropdown .dropdown-list li {
@@ -567,7 +567,7 @@ textarea.input {
 }
 
 .nav-menu li.has-dropdown.megamenu>.dropdown.tab-dropdown .tab-nav li.active {
-  background: #8D2629
+  background: #1f3864
 }
 
 .nav-menu li.has-dropdown.megamenu>.dropdown.tab-dropdown .tab-nav li.active a {
@@ -610,7 +610,7 @@ textarea.input {
 }
 
 .nav-aside-menu li a:hover, .nav-aside-menu li a:focus {
-  color: #8D2629;
+  color: #1f3864;
 }
 
 .nav-aside-menu li.has-dropdown>a {
@@ -776,7 +776,7 @@ textarea.input {
 }
 
 .post-category a {
-  color: #8D2629;
+  color: #1f3864;
   font-weight: 700;
   font-size: 12px;
   text-transform: uppercase;
@@ -808,7 +808,7 @@ textarea.input {
 }
 
 .post-meta li a:hover, .post-meta li a:focus {
-  color: #8D2629;
+  color: #1f3864;
 }
 
 .post-meta li:after {
@@ -877,7 +877,7 @@ textarea.input {
 }
 
 .post.post-thumb .post-title a:hover, .post.post-thumb .post-title a:focus {
-  color: #8D2629;
+  color: #1f3864;
 }
 
 .post.post-thumb .post-meta li {
@@ -889,7 +889,7 @@ textarea.input {
 }
 
 .post.post-thumb .post-meta li a:hover, .post.post-thumb .post-meta li a:focus {
-  color: #8D2629;
+  color: #1f3864;
 }
 
 /*----------------------------*\
@@ -966,7 +966,7 @@ textarea.input {
 }
 
 .page-header .post-meta li a:hover, .page-header .post-meta li a:focus {
-  color: #8D2629;
+  color: #1f3864;
 }
 
 .post-share a {
@@ -1118,7 +1118,7 @@ textarea.input {
 }
 
 .page-header .author .author-social li a:hover, .page-header .author .author-social li a:focus {
-  color: #8D2629;
+  color: #1f3864;
 }
 
 /*----------------------------*\
@@ -1185,11 +1185,11 @@ textarea.input {
 }
 
 .post-comments .media.media-author .media-heading h4 {
-  color: #8D2629;
+  color: #1f3864;
 }
 
 .post-comments .media.media-author .media-left:after {
-  background-color: #8D2629;
+  background-color: #1f3864;
 }
 
 /*=========================================================
@@ -1334,7 +1334,7 @@ textarea.input {
 
 .tags-widget ul li a:hover, .tags-widget ul li a:focus {
   color: #fff !important;
-  background-color: #8D2629;
+  background-color: #1f3864;
 }
 
 /*----------------------------*\
@@ -1391,7 +1391,7 @@ textarea.input {
 }
 
 #footer a:hover, #footer a:focus {
-  color: #8D2629;
+  color: #1f3864;
 }
 
 .footer-widget {
@@ -1449,7 +1449,7 @@ textarea.input {
   text-align: center;
   height: 40px;
   background: #fff;
-  color: #8D2629;
+  color: #1f3864;
   border: 1px solid #e8eaed;
   line-height: 40px;
   border-radius: 50%;
