@@ -3,67 +3,15 @@
 {% block content %}
 	<!-- SECTION -->
 	<div class="section">
-		<!-- container -->
-		<div class="container">
-			<!-- row -->
-			<div id="hot-post" class="row hot-post">
-				<div class="col-md-12 hot-post-left">
-					<!-- post -->
-					<div class="post post-thumb">
-						<a class="post-img" href="{% url 'blog_post' %}"><img src="{% static 'img/facebookcover.jpg' %}" alt=""></a>
-						<!--
-						<div class="post-body">
-							<div class="post-category">
-								<a href="{% url 'category' %}"></a>
-							</div>
-							<h3 class="post-title title-lg"><a href="{% url 'blog_post' %}"></a></h3>
-							<ul class="post-meta">
-								<li><a href="{% url 'author' %}"></a></li>
-							</ul>
-						</div>
-					</div>-->
-					<!-- /post -->
-				</div>
-				<div class="col-md-4 hot-post-right">
-					<!-- post -->
-					<!--
-					<div class="post post-thumb">
-						<a class="post-img" href="{% url 'blog_post' %}"><img src="{% static 'img/sample4.jpg' %}" alt=""></a>
-						<div class="post-body">
-							<div class="post-category">
-								<a href="{% url 'category' %}">Lifestyle</a>
-							</div>
-							<h3 class="post-title"><a href="{% url 'blog_post' %}">Sed ut perspiciatis, unde omnis iste natus error sit</a></h3>
-							<ul class="post-meta">
-								<li><a href="{% url 'author' %}">John Doe</a></li>
-								<li>20 April 2018</li>
-							</ul>
-						</div>
-					</div>-->
-					<!-- /post -->
-
-					<!-- post -->
-					<!--
-					<div class="post post-thumb">
-						<a class="post-img" href="{% url 'blog_post' %}"><img src="{% static 'img/sample1.jpg' %}" alt=""></a>
-						<div class="post-body">
-							<div class="post-category">
-								<a href="{% url 'category' %}">Fashion</a>
-								<a href="{% url 'category' %}">Lifestyle</a>
-							</div>
-							<h3 class="post-title"><a href="{% url 'blog_post' %}">Mel ut impetus suscipit tincidunt. Cum id ullum laboramus persequeris.</a></h3>
-							<ul class="post-meta">
-								<li><a href="{% url 'author' %}">John Doe</a></li>
-								<li>20 April 2018</li>
-							</ul>
-						</div>
-					</div>-->
-					<!-- /post -->
+		<!-- row -->
+		<div id="hot-post" class="row hot-post">
+			<div class="col-md-12 hot-post-left">
+				<div class="post post-thumb">
+					<a href="{% url 'blog_post' %}"><img id="img-principal" src="{% static 'img/facebookcover.jpg' %}" alt=""></a>
 				</div>
 			</div>
-			<!-- /row -->
 		</div>
-		<!-- /container -->
+		<!-- /row -->
 	</div>
 	<!-- /SECTION -->
 
