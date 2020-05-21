@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static instagram_client %}
 {% block content %}
 	<!-- SECTION -->
 	<div class="section">
@@ -850,26 +850,17 @@
 						</div>
 						<div class="galery-widget">
 							<ul>
-								<li><a href="#"><img src="{% static 'img/sample1.jpg' %}" alt=""></a></li>
-								<li><a href="#"><img src="{% static 'img/sample2.jpg' %}"alt=""></a></li>
-								<li><a href="#"><img src="{% static 'img/sample3.jpg' %}" alt=""></a></li>
-								<li><a href="#"><img src="{% static 'img/sample4.jpg' %}" alt=""></a></li>
-								<li><a href="#"><img src="{% static 'img/sample1.jpg' %}" alt=""></a></li>
-								<li><a href="#"><img src="{% static 'img/sample2.jpg' %}" alt=""></a></li>
+								{% instagram_user_recent_media instagram_profile_name %}
+								{% for media in recent_media %}
+									<li>
+										<a href="//instagram.com/p/{{ media.shortcode }}">
+											<img src="{{ media.thumbnail_src }}" alt="">
+										</a>
+									</li>
+								{% endfor %}
 							</ul>
 						</div>
 					</div>
-					<!-- /galery widget -->
-
-					<!-- Ad widget -->
-					<!--
-					<div class="aside-widget text-center">
-						<a href="#" style="display: inline-block;margin: auto;">
-							<img class="img-responsive" src="./img/ad-1.jpg" alt="">
-						</a>
-					</div>
-					-->
-					<!-- /Ad widget -->
 				</div>
 			</div>
 			<!-- /row -->
