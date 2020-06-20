@@ -159,6 +159,14 @@ figure>figcaption {
   color: #97989b;
 }
 
+.grow { 
+  transition: all .2s ease-in-out; 
+}
+  
+.grow:hover { 
+  transform: scale(1.1); 
+}
+
 /*----------------------------*\
   section
 \*----------------------------*/
