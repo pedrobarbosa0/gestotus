@@ -85,3 +85,7 @@ local_settings.py
 
 .env
 *.sqlite3
+
+### Folder ###
+sitestatic
+myvenv
