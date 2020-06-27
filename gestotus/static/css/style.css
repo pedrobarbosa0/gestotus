@@ -62,8 +62,6 @@ h4 {
   font-size: 16px;
 }
 
-h5 {}
-
 p {
   margin: 0px 0px 20px;
 }
@@ -159,12 +157,47 @@ figure>figcaption {
   color: #97989b;
 }
 
+div.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
 .grow { 
   transition: all .2s ease-in-out; 
 }
   
 .grow:hover { 
   transform: scale(1.1); 
+}
+
+.diagonal{
+  background-color: #1b1c1e;
+  min-height: 300px;
+  position: relative;
+  margin: 0;
+  padding-top: 70px;
+  padding-bottom: 80px;
+  width: 100%;
+  height: 100px;
+  -webkit-clip-path: polygon(30% 0, 100% 100%, 100% 0);
+  clip-path: polygon(30% 0, 100% 100%, 100% 0);
+}
+
+.diagonal2{
+  background-color: #1b1c1e;
+  min-height: 300px;
+  position: relative;
+  margin: 0;
+  padding-top: 70px;
+  padding-bottom: 80px;
+  width: 100%;
+  height: 100px;
+  -webkit-clip-path: polygon(0% 0, 0% 100%, 100% 100%);
+  clip-path: polygon(0% 0, 0% 100%, 100% 100%);
+}
+
+.carousel-inner > .item > a > img, .carousel-inner > .item > img { 
+  display: inline-block;
 }
 
 /*----------------------------*\
@@ -1510,7 +1543,6 @@ textarea.input {
     transform: none;
     left: 0;
     display: inline-block;
-    float: left;
   }
   .footer-nav {
     text-align: left;
