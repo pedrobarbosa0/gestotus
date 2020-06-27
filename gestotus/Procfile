@@ -1,1 +1,0 @@
-web: gunicorn gestotus.wsgi -c /app/config/gunicorn/gunicorn.conf.py
