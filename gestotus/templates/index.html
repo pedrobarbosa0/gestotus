@@ -162,6 +162,115 @@
 					</div>
 					<!-- /row -->
 
+					<br>
+
+					<!-- row -->
+					<div class="row d-flex justify-content-center m-t-60">
+						<div class="col-md-12">
+							<div class="section-title">
+								<h2 class="title">Publicações Recentes</h2>
+							</div>
+						</div>
+
+						<div class="col-md-4">
+							<div class="post post-sm">
+								<a class="post-img" href="{% url 'blog_post' %}"><img src="{% static 'img/sample3.jpg' %}" alt=""></a>
+								<div class="post-body">
+									<div class="post-category">
+										<a href="{% url 'category' %}">Fashion</a>
+										<a href="{% url 'category' %}">Lifestyle</a>
+									</div>
+									<h3 class="post-title title-sm"><a href="{% url 'blog_post' %}">Postea senserit id eos, vivendo periculis ei qui</a></h3>
+									<ul class="post-meta">
+										<li><a href="{% url 'author' %}">John Doe</a></li>
+										<li>20 April 2018</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-4">
+							<div class="post post-sm">
+								<a class="post-img" href="{% url 'blog_post' %}"><img src="{% static 'img/sample3.jpg' %}" alt=""></a>
+								<div class="post-body">
+									<div class="post-category">
+										<a href="{% url 'category' %}">Fashion</a>
+										<a href="{% url 'category' %}">Lifestyle</a>
+									</div>
+									<h3 class="post-title title-sm"><a href="{% url 'blog_post' %}">Postea senserit id eos, vivendo periculis ei qui</a></h3>
+									<ul class="post-meta">
+										<li><a href="{% url 'author' %}">John Doe</a></li>
+										<li>20 April 2018</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-4">
+							<div class="post post-sm">
+								<a class="post-img" href="{% url 'blog_post' %}"><img src="{% static 'img/sample3.jpg' %}" alt=""></a>
+								<div class="post-body">
+									<div class="post-category">
+										<a href="{% url 'category' %}">Fashion</a>
+										<a href="{% url 'category' %}">Lifestyle</a>
+									</div>
+									<h3 class="post-title title-sm"><a href="{% url 'blog_post' %}">Postea senserit id eos, vivendo periculis ei qui</a></h3>
+									<ul class="post-meta">
+										<li><a href="{% url 'author' %}">John Doe</a></li>
+										<li>20 April 2018</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="text-center">
+							<button class="primary-button">Ver mais</button>
+						</div>						
+					</div>
+					<!-- /row -->
+
+					<!-- row -->
+					<div class="row d-flex justify-content-center m-t-60">
+						<div class="col-md-12">
+							<div class="section-title">
+								<h2 class="title">Soluções inteligentes para sua gestão</h2>
+							</div>
+						</div>
+
+						<div class="col-md-3 text-center">
+							<div class="icon-home">
+								<img src="{% static 'svg/dollar-sign-solid.svg' %}" width="30">
+							</div>
+							<hr>
+							Preço
+						</div>
+
+						<div class="col-md-3 text-center">
+							<div class="icon-home">
+								<img src="{% static 'svg/calendar-check-solid.svg' %}" width="45">
+							</div>
+							<hr>
+							Prazo
+						</div>
+
+						<div class="col-md-3 text-center">
+							<div class="icon-home">
+								<img src="{% static 'svg/award-solid.svg' %}" width="45">
+							</div>
+							<hr>
+							Soluções
+						</div>
+
+						<div class="col-md-3 text-center">
+							<div class="icon-home">
+								<img src="{% static 'svg/award-solid.svg' %}" width="45">
+							</div>
+							<hr>
+							Qualidade
+						</div>						
+					</div>
+					<!-- /row -->
+
 					<!-- row -->
 					<div class="row">
 						<div class="col-md-12">
@@ -483,6 +592,24 @@
 						</div>-->
 					</div>
 					<!-- /category widget -->
+
+					<div class="aside-widget">
+						<div class="section-title">
+							<h2 class="title">Instagram</h2>
+						</div>
+						<div class="galery-widget">
+							<ul>
+								{% instagram_user_recent_media instagram_profile_name %}
+								{% for media in recent_media %}
+									<li>
+										<a href="//instagram.com/p/{{ media.shortcode }}">
+											<img src="{{ media.thumbnail_src }}" alt="">
+										</a>
+									</li>
+								{% endfor %}
+							</ul>
+						</div>
+					</div>
 
 					<!-- newsletter widget -->
 					<!--<div class="aside-widget">
@@ -928,24 +1055,6 @@
 				</div>
 				<div class="col-md-4">
 					-->
-					<!-- galery widget -->
-					<div class="aside-widget">
-						<div class="section-title">
-							<h2 class="title">Instagram</h2>
-						</div>
-						<div class="galery-widget">
-							<ul>
-								{% instagram_user_recent_media instagram_profile_name %}
-								{% for media in recent_media %}
-									<li>
-										<a href="//instagram.com/p/{{ media.shortcode }}">
-											<img src="{{ media.thumbnail_src }}" alt="">
-										</a>
-									</li>
-								{% endfor %}
-							</ul>
-						</div>
-					</div>
 				</div>
 			</div>
 			<!-- /row -->

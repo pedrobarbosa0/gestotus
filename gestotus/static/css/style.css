@@ -1601,3 +1601,12 @@ textarea.input {
   } 
 }
 
+.m-t-60 {
+  margin-top: 60px;
+}
+
+.icon-home {
+  border-radius: 50%;
+  border: 1px solid black;
+  padding: 40px;
+}
