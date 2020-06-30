@@ -1,4 +1,4 @@
-{% load static %}
+{% load static instagram_client %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -380,6 +380,7 @@
 				</div>
 				<div class="col-md-4">
 					<div class="footer-widget">
+						<!--
 						<h3 class="footer-title">Tags</h3>
 						<div class="tags-widget">
 							<ul>
@@ -389,6 +390,20 @@
 								<li><a href="#">Gestão de projetos</a></li>
 								<li><a href="#">Plano de Negócio</a></li>
 								<li><a href="#">Gestão de contrato</a></li>
+							</ul>
+						</div>
+						-->
+						<h3 class="footer-title">Instagram</h3>
+						<div class="galery-widget">
+							<ul>
+								{% instagram_user_recent_media instagram_profile_name %}
+								{% for media in recent_media %}
+									<li>
+										<a href="//instagram.com/p/{{ media.shortcode }}">
+											<img src="{{ media.thumbnail_src }}" alt="">
+										</a>
+									</li>
+								{% endfor %}
 							</ul>
 						</div>
 					</div>

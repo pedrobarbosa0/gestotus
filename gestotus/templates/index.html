@@ -1,27 +1,23 @@
 {% extends 'base.html' %}
 {% load static instagram_client %}
 {% block content %}
-	<!-- SECTION -->
-	<div class="section">
-		<!-- row -->
-		<div id="hot-post" class="row hot-post">
-			<div class="col-md-12 hot-post-left">
-				<div class="post post-thumb">
-					<a href="{% url 'blog_post' %}"><img id="img-principal" src="{% static 'img/facebookcover.jpg' %}" alt=""></a>
-				</div>
+	<!-- row -->
+	<div id="hot-post" class="row hot-post">
+		<div class="col-md-12 hot-post-left">
+			<div class="post post-thumb">
+				<a href="{% url 'blog_post' %}"><img id="img-principal" src="{% static 'img/facebookcover.jpg' %}" alt=""></a>
 			</div>
 		</div>
-		<!-- /row -->
 	</div>
-	<!-- /SECTION -->
+	<!-- /row -->
 
 	<!-- SECTION -->
 	<div class="section">
 		<!-- container -->
-		<div class="container">
+		<div class="container container-home">
 			<!-- row -->
 			<div class="row">
-				<div class="col-md-8 d-flex justify-content-center">
+				<div class="col-md-12 d-flex justify-content-center">
 					<!-- row -->
 					<div class="row d-flex justify-content-center">
 						<div class="col-md-12">
@@ -40,12 +36,12 @@
 								<h2 class="title"></h2>
 							</div>
 						</div>
-						<div class="col-md-5">
+						<div class="col-md-4">
 							<div class="grow">
 								<div class="panel" style="max-width: 46rem;  height: 25vh; border-radius: 10px;">
 									<div class="card" style="border-radius: 10px;">
 										<div class="panel-body text-dark" style="height: 25vh; border-radius: 10px;">
-											<h4 style="margin-bottom: 10px;">MISSÃO</h5>
+											<h4 style="margin-bottom: 10px;">MISSÃO</h4>
 											<p>Fornecer soluções criativas e inovadoras, através de assessoria, consultoria e treinamento com foco em resultados para os nossos clientes e parceiros.</p>
 										</div>
 									</div>
@@ -57,19 +53,19 @@
 								<div class="panel" style="max-width: 46rem;  height: 25vh; border-radius: 10px;">
 									<div class="card" style="border-radius: 10px;">
 										<div class="panel-body text-dark" style="height: 25vh; border-radius: 10px;">
-											<h4 style="margin-bottom: 10px;">VISÃO</h5>
+											<h4 style="margin-bottom: 10px;">VISÃO</h4>
 											<p>Ser referência em consultoria e treinamento  para empresas e gestão pública até 2022.</p>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-4">
 							<div class="grow">
 								<div class="panel" style="max-width: 46rem; height: 25vh; border-radius: 10px;">
 									<div class="card" style="border-radius: 10px;">
 										<div class="panel-body text-dark" style="height: 25vh; border-radius: 10px;">
-											<h4 style="margin-bottom: 10px;">VALORES</h5>
+											<h4 style="margin-bottom: 10px;">VALORES</h4>
 											<p>Ética<br>Respeito<br>Comprometimento</p>
 										</div>
 									</div>
@@ -485,213 +481,6 @@
 						<!-- /post -->
 					</div>
 					<!-- /row -->
-				</div>
-				<div class="col-md-4">
-					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-						<!-- Indicators -->
-						<ol class="carousel-indicators">
-							<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-							<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-							<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-						</ol>
-
-						<!-- Wrapper for slides -->
-						<div class="carousel-inner" role="listbox">
-							<div class="item active">
-								<img src="/static/dados/IMG-20191008-WA0012.jpg" alt="...">
-								<!-- <div class="carousel-caption">
-									...
-								</div> -->
-							</div>
-							<div class="item">
-								<img src="/static/dados/IMG-20191008-WA0013.jpg" alt="...">
-								<!-- <div class="carousel-caption">
-									...
-								</div> -->
-							</div>
-							<div class="item">
-								<img src="/static/dados/IMG-20191008-WA0014.jpg" alt="...">
-								<!-- <div class="carousel-caption">
-									...
-								</div> -->
-							</div>
-						</div>
-
-						<!-- Controls -->
-						<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-							<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-							<span class="sr-only">Previous</span>
-						</a>
-						<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-							<span class="sr-only">Next</span>
-						</a>
-					</div>
-					<!-- ad widget-->
-					<div class="aside-widget text-center">
-						<a href="#" style="display: inline-block;margin: auto;">
-							<img class="img-responsive" =src="{% static 'img/sample4.jpg' %}" alt="">
-						</a>
-					</div>
-					<!-- /ad widget -->
-
-					<!-- social widget -->
-					<div class="aside-widget">
-						<div class="section-title">
-							<h2 class="title">Social Media</h2>
-						</div>
-						<div class="social-widget">
-							<ul>
-								<li>
-									<a href="https://www.facebook.com/gestotusconsultoria" target="_blank" class="social-facebook">
-										<i class="fa fa-facebook"></i>
-									</a>
-								</li>
-								<li>
-									<a href="https://twitter.com/gestotus" target="_blank" class="social-twitter">
-										<i class="fa fa-twitter"></i>	
-									</a>
-								</li>
-								<li>
-									<a href="https://www.linkedin.com/company/gestotus-consultoria/" target="_blank" class="social-linkedin">
-										<i class="fa fa-linkedin"></i>
-									</a>
-								</li>
-								<li>
-									<a href="https://www.instagram.com/gestotus/?hl=pt-br" target="_blank" class="social-instagram">
-										<i class="fa fa-instagram"></i>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<!-- /social widget -->
-
-					<!-- category widget -->
-					<div class="aside-widget">
-						<div class="section-title">
-							<h2 class="title">Serviços</h2>
-						</div>
-						<div class="category-widget">
-							<ul>
-								<li><a href="#">Consultoria em Convênio<span></span></a></li>
-								<li><a href="#">Consultoria em Gestão de Projetos<span></span></a></li>
-								<li><a href="#">Consultoria de Licitações e Contratos<span></span></a></li>
-								<li><a href="#">Consultoria em Compliance e ética empresarial<span></span></a></li>
-								<li><a href="#">Modelagem de negócios Locais<span></span></a></li>
-							</ul>
-						</div>
-						<!--<div class="category-widget">
-							<ul>
-								<li><a href="#">Lifestyle <span>451</span></a></li>
-								<li><a href="#">Fashion <span>230</span></a></li>
-								<li><a href="#">Technology <span>40</span></a></li>
-								<li><a href="#">Travel <span>38</span></a></li>
-								<li><a href="#">Health <span>24</span></a></li>
-							</ul>
-						</div>-->
-					</div>
-					<!-- /category widget -->
-
-					<div class="aside-widget">
-						<div class="section-title">
-							<h2 class="title">Instagram</h2>
-						</div>
-						<div class="galery-widget">
-							<ul>
-								{% instagram_user_recent_media instagram_profile_name %}
-								{% for media in recent_media %}
-									<li>
-										<a href="//instagram.com/p/{{ media.shortcode }}">
-											<img src="{{ media.thumbnail_src }}" alt="">
-										</a>
-									</li>
-								{% endfor %}
-							</ul>
-						</div>
-					</div>
-
-					<!-- newsletter widget -->
-					<!--<div class="aside-widget">
-						<div class="section-title">
-							<h2 class="title">Newsletter</h2>
-						</div>
-						<div class="newsletter-widget">
-							<form>
-								<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium.</p>
-								<input class="input" name="newsletter" placeholder="Enter Your Email">
-								<button class="primary-button">Subscribe</button>
-							</form>
-						</div>
-					</div>-->
-					<!-- /newsletter widget -->
-
-					<!-- post widget -->
-					<div class="aside-widget">
-						<!--
-						<div class="section-title">
-							<h2 class="title">Popular Posts</h2>
-						</div>
-						-->
-						<!-- post -->
-						<!--
-						<div class="post post-widget">
-							<a class="post-img" href="{% url 'blog_post' %}"><img src="{% static 'img/sample1.jpg' %}" alt=""></a>
-							<div class="post-body">
-								<div class="post-category">
-									<a href="{% url 'category' %}">Lifestyle</a>
-								</div>
-								<h3 class="post-title"><a href="{% url 'blog_post' %}">Ne bonorum praesent cum, labitur persequeris definitionem quo cu?</a></h3>
-							</div>
-						</div>
-						-->
-						<!-- /post -->
-
-						<!-- post -->
-						<!--
-						<div class="post post-widget">
-							<a class="post-img" href="{% url 'blog_post' %}"><img src="{% static 'img/sample2.jpg' %}" alt=""></a>
-							<div class="post-body">
-								<div class="post-category">
-									<a href="{% url 'category' %}">Technology</a>
-									<a href="{% url 'category' %}">Lifestyle</a>
-								</div>
-								<h3 class="post-title"><a href="{% url 'blog_post' %}">Mel ut impetus suscipit tincidunt. Cum id ullum laboramus persequeris.</a></h3>
-							</div>
-						</div>
-						-->
-						<!-- /post -->
-
-						<!-- post -->
-						<!--
-						<div class="post post-widget">
-							<a class="post-img" href="{% url 'blog_post' %}"><img src="{% static 'img/sample3.jpg' %}" alt=""></a>
-							<div class="post-body">
-								<div class="post-category">
-									<a href="{% url 'category' %}">Health</a>
-								</div>
-								<h3 class="post-title"><a href="{% url 'blog_post' %}">Postea senserit id eos, vivendo periculis ei qui</a></h3>
-							</div>
-						</div>
-						-->
-						<!-- /post -->
-
-						<!-- post -->
-						<!--
-						<div class="post post-widget">
-							<a class="post-img" href="{% url 'blog_post' %}"><img src="{% static 'img/sample4.jpg' %}" alt=""></a>
-							<div class="post-body">
-								<div class="post-category">
-									<a href="{% url 'category' %}">Health</a>
-									<a href="{% url 'category' %}">Lifestyle</a>
-								</div>
-								<h3 class="post-title"><a href="{% url 'blog_post' %}">Sed ut perspiciatis, unde omnis iste natus error sit</a></h3>
-							</div>
-						</div>
-						-->
-						<!-- /post -->
-					</div>
-					<!-- /post widget -->
 				</div>
 			</div>
 			<!-- /row -->

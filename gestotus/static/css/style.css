@@ -1614,3 +1614,21 @@ textarea.input {
   width: 100px;
   height: 100px;
 }
+
+@media (min-width: 1200px) {
+  .container-home {
+    width: 1000px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container-home {
+    width: 800px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .container-home {
+    width: 500px;
+  }
+}
