@@ -340,7 +340,11 @@ textarea.input {
 }
 
 .social-linkedin {
-  background: #4875B4
+  background: #4875B4 !important;
+}
+
+.social-whatsapp {
+  background: #25D366 !important;
 }
 
 .social-instagram {

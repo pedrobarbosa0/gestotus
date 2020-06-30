@@ -46,6 +46,7 @@
 						<li><div class="grow"><a href="https://twitter.com/gestotus" target="_blank"><i class="fa fa-twitter"></i></a></div></li>
 						<li><div class="grow"><a href="https://www.linkedin.com/company/gestotus-consultoria/" target="_blank"><i class="fa fa-linkedin"></i></a></div></li>
 						<li><div class="grow"><a href="https://www.instagram.com/gestotus/?hl=pt-br" target="_blank"><i class="fa fa-instagram"></i></a></div></li>
+						<li><div class="grow"><a href="#" target="_blank"><i class="fa fa-whatsapp"></i></a></div></li>
 					</ul>
 					<!-- /social -->
 
@@ -350,7 +351,7 @@
 		<div class="container">
 			<!-- row -->
 			<div class="row">
-				<div class="col-md-3">
+				<div class="col-md-4">
 					<div class="footer-widget">
 						<div class="footer-logo">
 							<a href="{% url 'home' %}"><img src="{% static 'img/logotrns.png' %}" height="70" width="230" alt="Logo Gestotus"></a>
@@ -361,12 +362,13 @@
 							<li><div class="grow"><a href="https://twitter.com/gestotus" target="_blank" class="social-twitter"><i class="fa fa-twitter"></i></a></li>
 							<li><div class="grow"><a href="https://www.linkedin.com/company/gestotus-consultoria/" target="_blank" class="social-linkedin"><i class="fa fa-linkedin"></i></a></div></li>
 							<li><div class="grow"><a href="https://www.instagram.com/gestotus/?hl=pt-br" target="_blank" class="social-instagram"><i class="fa fa-instagram"></i></a></div></li>
+							<li><div class="grow"><a href="#" target="_blank" class="social-whatsapp"><i class="fa fa-whatsapp"></i></a></div></li>
 						</ul>
 					</div>
 				</div>
-				<div class="col-md-5">
+				<div class="col-md-4">
 					<div class="footer-widget">
-						<h3 class="footer-title">Serviços</h3>
+						<!-- <h3 class="footer-title">Serviços</h3>
 						<div class="category-widget">
 							<ul>
 								<li><a href="#">Consultoria em Convênio<span></span></a></li>
@@ -375,7 +377,14 @@
 								<li><a href="#">Consultoria em Compliance e ética empresarial<span></span></a></li>
 								<li><a href="#">Modelagem de negócios Locais<span></span></a></li>
 							</ul>
-						</div>
+						</div> -->
+						<h3 class="footer-title">Informação para contato</h2>
+						<!-- <p>Malis debet quo et, eam an lorem quaestio. Mea ex quod facer decore, eu nam mazim postea. Eu deleniti pertinacia ius. Ad elitr latine eam, ius sanctus eleifend no, cu primis graecis comprehensam eum. Ne vim prompta consectetuer, etiam signiferumque ea eum.</p> -->
+						<ul class="contact">
+							<li><i class="fa fa-phone"></i> (82)9.9690-4908 </li>
+							<li><i class="fa fa-envelope"></i> <a href="#">gestotusconsultoria@gmail.com</a></li>
+							<li><i class="fa fa-map-marker"></i> Maceió-Al, Brasil</li>
+						</ul>
 					</div>
 				</div>
 				<div class="col-md-4">
@@ -393,7 +402,7 @@
 							</ul>
 						</div>
 						-->
-						<h3 class="footer-title">Instagram</h3>
+						<!-- <h3 class="footer-title">Instagram</h3>
 						<div class="galery-widget">
 							<ul>
 								{% instagram_user_recent_media instagram_profile_name %}
@@ -405,7 +414,29 @@
 									</li>
 								{% endfor %}
 							</ul>
-						</div>
+						</div> -->
+						
+						<h3 class="footer-title">Envie-nos um email</h2>
+						<form>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group">
+										<input class="input" type="email" name="email" placeholder="Email" style="background-color: #353535; border: none; border-radius: 8px;">
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<input class="input" type="text" name="subject" placeholder="Assunto" style="background-color: #353535; border: none; border-radius: 8px;">
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<textarea class="input" name="message" placeholder="Messagem" style="background-color: #353535; border: none; border-radius: 8px;"></textarea>
+									</div>
+									<button class="primary-button">Enviar</button>
+								</div>
+							</div>
+						</form>
 					</div>
 				</div>
 				<!--<div class="col-md-3">
