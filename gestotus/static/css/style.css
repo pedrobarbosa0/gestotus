@@ -159,9 +159,27 @@ figure>figcaption {
 
 div.card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  display: flex;
   text-align: center;
   align-items: center;
+  border-radius: 12px;
+  height: auto;
+}
+
+.card-heading {
+  color: #333;
+  background-color: #1f3864;
+  border-color: #ddd;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px 10px 0px 0px;
+  padding: 4%;
+}
+
+.card-heading h4 {
+  margin-bottom: 3px;
+  margin-top: 3px;
+  color: white;
+  font-weight: 500;
 }
 
 .grow { 
@@ -268,7 +286,7 @@ textarea.input {
 .primary-button, .secondary-button {
   display: inline-block;
   padding: 10px 40px;
-  border-radius: 2px;
+  border-radius: 10px;
   border: none;
   font-weight: 700;
   font-size: 14px;
@@ -786,6 +804,7 @@ textarea.input {
 .post .post-img {
   display: block;
   overflow: hidden;
+  border-radius: 8px;
 }
 
 .post-img>img {
