@@ -580,19 +580,6 @@ textarea.input {
   transform-origin: 50% 0;
 }
 
-.nav-menu a::before{
-  content: "";
-  width: 100%;
-  height: 4px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: #fff;
-  transition: 0.5s transform ease;
-  transform: scale3d(0,1,1);
-  transform-origin: 50% 0;
-}
-
 .nav-menu a:hover::after{
   transform: scale3d(1,1,1);
 }
@@ -601,17 +588,6 @@ textarea.input {
   transform-origin: 50% 0;
 }
 .nav-menu a:hover::after{
-  transform-origin: 50% 0;
-}
-
-.nav-menu a:hover::before{
-  transform: scale3d(1,1,1);
-}
-.nav-menu a::before{
-  background: #ffffff;
-  transform-origin: 50% 0;
-}
-.nav-menu a:hover::before{
   transform-origin: 50% 0;
 }
 
