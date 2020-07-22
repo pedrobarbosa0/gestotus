@@ -19,15 +19,5 @@ from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", TemplateView.as_view(template_name="index.html", extra_context={
-        "instagram_profile_name": "gestotus",
-    }), name="home"),
-    path("about/", TemplateView.as_view(template_name="about.html"), name="about"),
-    path("contact/", TemplateView.as_view(template_name="contact.html"), name="contact"),
-    path("category/", TemplateView.as_view(template_name="category.html"), name="category"),
-    path("blog-post/", TemplateView.as_view(template_name="blog-post.html"), name="blog_post"),
-    path("author/", TemplateView.as_view(template_name="author.html"), name="author"),
-    path("blank/", TemplateView.as_view(template_name="blank.html"), name="blank"),
-    path("servicos/", TemplateView.as_view(template_name="servicos.html"), name="servicos"),
-    path("parceiros/", TemplateView.as_view(template_name="parceiros.html"), name="parceiros"),
+    path("", TemplateView.as_view(template_name="index.html"), name="index")
 ]
