@@ -31,8 +31,9 @@
     offset: 56
   });
 
+  
   // Collapse Navbar
-  var navbarCollapse = function () {
+  /*var navbarCollapse = function () {
     if ($("#mainNav").offset().top > 100) {
       $("#mainNav").addClass("navbar-shrink");
     } else {
@@ -43,6 +44,8 @@
   navbarCollapse();
   // Collapse the navbar when page is scrolled
   $(window).scroll(navbarCollapse);
+  */
+
 
   // Hide navbar when modals trigger
   $('.portfolio-modal').on('show.bs.modal', function (e) {
