@@ -2630,12 +2630,6 @@ select.mobile-device {
     grid-template-columns:  1fr 1fr 1fr;
     gap: 24px;
   }
-
-@media (max-width: 900px) {
-    .cards {
-        grid-template-columns: 1fr;
-    }
-}
   
   div.card2 {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -2733,3 +2727,15 @@ select.mobile-device {
     border-radius: 50%;
     color: #fff !important;
   }
+
+  @media (max-width: 900px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+    .grow {
+        transition: none;
+    }
+    .grow:hover {
+        transform: none;
+    }
+}
