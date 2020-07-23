@@ -1,2 +1,5 @@
-
 /** ADD YOUR AWESOME CODES HERE **/
+#home {
+	background: url('static/img/facebookcover.jpg');
+	height: 100%;
+}
