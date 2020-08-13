@@ -61,25 +61,17 @@
               <a class="nav-link js-scroll-trigger active" href="#home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">Quem Somos</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#services">Serviços</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#cursos">Cursos</a>
             </li>
-			<li class="nav-item">
+            <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#blog">Blog</a>
             </li>
 			<li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#parceiros">Parceiros</a>
-            </li>
-			<li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#membros">Membros</a>
-            </li>
-			<li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contato</a>
+              {# <a class="nav-link js-scroll-trigger" href="#about">about</a> #}
+			  <a class="nav-link" href="{% url 'about' %}">Sobre Nós</a>
             </li>
           </ul>
         </div>
@@ -105,27 +97,7 @@
 		</div> -->
 	</section>
 
-    <div id="about" class="section lb">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="message-box">                        
-                        <h2>Quem Somos</h2>
-                        <p>A GESTOTUS Consultoria, Assessoria e Treinamento criada em 2015, atua em serviços de consultoria, assessoria e capacitação voltados para gestão pública e privada, com expertise em interpretação, elaboração, gestão, execução e prestação de contas de editais; diagnóstico, pesquisa e mapeamento de vocação produtiva; construção de cenários para o desenvolvimento local; elaboração e monitoramento de indicadores; modelagem de negócios locais; gestão de contratos, instrução e fluxo processual; desenho/estrutura de Lei Delegada; licitação; gestão, capacitação e desenvolvimento de compras públicas; planejamento empresarial.</p>
-						<!-- <p>Trabalhamos com transparência, responsabilidade, cumprindo prazos, fornecendo soluções eficazes e inteligentes em busca da excelência e resultado final dos serviços de forma satisfatória.É uma honra fazer parte dessa história e mudar realidades, fomentando o desenvolvimento econômico e social, fazendo com que o fruto do nosso trabalho tenha consequências positivas numa rede de ações contínuas e encadeadas, trazendo resultados coletivos construtivos.</p> -->
-
-                        <a href="#contact" class="sim-btn hvr-bounce-to-top"><span>Entre em Contato</span></a>
-                    </div><!-- end messagebox -->
-                </div><!-- end col -->
-
-                <div class="col-md-6">
-                    <div class="right-box-pro wow fadeIn">
-                        <img src="{% static 'img/IMG-20191008-WA0012.jpg' %}" alt="" class="img-fluid img-rounded">
-                    </div><!-- end media -->
-                </div><!-- end col -->
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </div><!-- end section -->
+	
 	
     <div id="services" class="section wb">
         <div class="container">
@@ -379,7 +351,6 @@
 		</div>
 	</div>
 	
-	
 	<div id="blog" class="section wb">
 		<div class="container">
 			<div class="section-title text-center">
@@ -453,11 +424,57 @@
 			
 		</div>
 	</div>
-	
+
+    <!-- <div id="contact" class="section db">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>Contato</h3>
+                <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.</p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="contact_form">
+                        <div id="message"></div>
+                        <form id="contactForm" name="sentMessage" novalidate="novalidate">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<input class="form-control" id="name" type="text" placeholder="Seu Nome" required="required" data-validation-required-message="Please enter your name.">
+										<p class="help-block text-danger"></p>
+									</div>
+									<div class="form-group">
+										<input class="form-control" id="email" type="email" placeholder="Seu Email" required="required" data-validation-required-message="Please enter your email address.">
+										<p class="help-block text-danger"></p>
+									</div>
+									<div class="form-group">
+										<input class="form-control" id="phone" type="tel" placeholder="Seu Telefone" required="required" data-validation-required-message="Please enter your phone number.">
+										<p class="help-block text-danger"></p>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<textarea class="form-control" id="message" placeholder="Sua Menssagem" required="required" data-validation-required-message="Please enter a message."></textarea>
+										<p class="help-block text-danger"></p>
+									</div>
+								</div>
+								<div class="clearfix"></div>
+								<div class="col-lg-12 text-center">
+									<div id="success"></div>
+									<button id="sendMessageButton" class="sim-btn hvr-bounce-to-top" type="submit">Enviar Email</button>
+								</div>
+							</div>
+						</form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
 	<div id="parceiros" class="section lb">
 		<div class="container">
 			<div class="section-title text-center">
-				<h3>Nossos Parceiros</h3>
+				<h3>Parceiros</h3>
 				<p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.</p>
 			</div><!-- end title -->
 		
@@ -550,311 +567,35 @@
 				<div class="col-md-12">
 					<div class="cards">
 						<div class="card2 grow">
-							<img src="{% static 'img/doutor-licitacao-wide-logo.png' %}" alt="Logo Doutor Licitação">
-							<div style="display: flex; align-items: center; justify-content: space-between;">
+							<a href="https://www.instagram.com/doctorlicitacao/" target="_blank"><img src="{% static 'img/doutor-licitacao-wide-logo.png' %}" alt="Logo Doutor Licitação"></a>
+							<!-- <div style="display: flex; align-items: center; justify-content: space-between;">
 								<h3>Doutor Licitação</h3>
-								<ul class="contact-social" style="padding: 0 30px 0 0;"><div class="grow"><li><a href="https://www.instagram.com/drlicitacao/" class="social-instagram" target="_blank"><i class="fa fa-instagram"></i></a></li></div></ul>
-							</div>
+								<ul class="contact-social" style="padding: 0 30px 0 0;"><div class="grow"><li><a href="https://www.instagram.com/doctorlicitacao/" class="social-instagram" target="_blank"><i class="fa fa-instagram"></i></a></li></div></ul>
+							</div> -->
 						</div>
 						<div class="card2 grow">
-							<img src="{% static 'img/download.jpg' %}" alt="Logo Sururu Talks">
-							<div style="display: flex; align-items: center; justify-content: space-between;">
+							<a href="http://sururutalks.com/" target="_blank"><img src="{% static 'img/download.jpg' %}" alt="Logo Sururu Talks"></a>
+							<!--<div style="display: flex; align-items: center; justify-content: space-between;">
 								<h3>Sururu Talks</h3>
 								<ul class="contact-social" style="padding: 0 30px 0 0;"><div class="grow"><li><a href="http://sururutalks.com/" class="social-web" target="_blank"><i class="fa fa-globe"></i></a></li></div></ul>
-							</div>
+							</div> -->
 						</div>
 						<div class="card2 grow">
-							<img src="{% static 'img/fonte-preco-wide-logo.png' %}" alt="Logo Fonte de Preços">
-							<div style="display: flex; align-items: center; justify-content: space-between;">
+							<a href="https://www.fontedeprecos.com.br/" target="_blank"><img src="{% static 'img/fonte-preco-wide-logo.png' %}" alt="Logo Fonte de Preços"></a>
+							<!--<div style="display: flex; align-items: center; justify-content: space-between;">
 								<h3>Fonte de Preços</h3>
 								<ul class="contact-social" style="padding: 0 30px 0 0;"><div class="grow"><li><a href="https://www.fontedeprecos.com.br/" class="social-web" target="_blank"><i class="fa fa-globe"></i></a></li></div></ul>
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	
-	<div id="membros" class="section wb">
-		<div class="container">
-			<div class="section-title text-center">
-                <h3>Nossos Membros</h3>
-                <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.</p>
-            </div><!-- end title -->
-			
-			<div class="row">
-                <!-- <div class="col-md-4 col-sm-6">
-                    <div class="pricingTable">
-                        <svg x="0" y="0" viewBox="0 0 360 220">
-                            <g>
-                                <path fill="#28a9e2" d="M0.732,193.75c0,0,29.706,28.572,43.736-4.512c12.976-30.599,37.005-27.589,44.983-7.061
-                                    c8.09,20.815,22.83,41.034,48.324,27.781c21.875-11.372,46.499,4.066,49.155,5.591c6.242,3.586,28.729,7.626,38.246-14.243
-                                    s27.202-37.185,46.917-8.488c19.715,28.693,38.687,13.116,46.502,4.832c7.817-8.282,27.386-15.906,41.405,6.294V0H0.48
-                                    L0.732,193.75z"></path>
-                            </g>
-                            <text transform="matrix(1 0 0 1 69.7256 116.2686)" fill="#fff" font-size="78.4489">$10</text>
-                            <text transform="matrix(0.9566 0 0 1 197.3096 83.9121)" fill="#fff" font-size="29.0829">.99</text>
-                            <text transform="matrix(1 0 0 1 233.9629 115.5303)" fill="#fff" font-size="15.4128">/Month</text>
-                        </svg>
-                        <div class="pricing-content">
-                            <h3 class="title">Standard</h3>
-                            <ul class="pricing-content">
-                                <li><b>50GB</b> Disk Space</li>
-                                <li><b>50</b> Email Accounts</li>
-                                <li><b>50GB</b> Bandwidth</li>
-                                <li><b>10</b> Subdomains</li>
-                                <li><b>15</b> Domains</li>
-                            </ul>
-                            <a href="#" class="sim-btn hvr-bounce-to-top pricingTable-signup">Buy Now</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-6">
-                    <div class="pricingTable blue">
-                        <svg x="0" y="0" viewBox="0 0 360 220">
-                            <g>
-                                <path fill="#28a9e2" d="M0.732,193.75c0,0,29.706,28.572,43.736-4.512c12.976-30.599,37.005-27.589,44.983-7.061
-                                    c8.09,20.815,22.83,41.034,48.324,27.781c21.875-11.372,46.499,4.066,49.155,5.591c6.242,3.586,28.729,7.626,38.246-14.243
-                                    s27.202-37.185,46.917-8.488c19.715,28.693,38.687,13.116,46.502,4.832c7.817-8.282,27.386-15.906,41.405,6.294V0H0.48
-                                    L0.732,193.75z"></path>
-                            </g>
-                            <text transform="matrix(1 0 0 1 69.7256 116.2686)" fill="#fff" font-size="78.4489">$20</text>
-                            <text transform="matrix(0.9566 0 0 1 197.3096 83.9121)" fill="#fff" font-size="29.0829">.99</text>
-                            <text transform="matrix(1 0 0 1 233.9629 115.5303)" fill="#fff" font-size="15.4128">/Month</text>
-                        </svg>
-                        <div class="pricing-content">
-                            <h3 class="title">Business</h3>
-                            <ul class="pricing-content">
-                                <li><b>60GB</b> Disk Space</li>
-                                <li><b>60</b> Email Accounts</li>
-                                <li><b>60GB</b> Bandwidth</li>
-                                <li><b>15</b> Subdomains</li>
-                                <li><b>20</b> Domains</li>
-                            </ul>
-                            <a href="#" class="sim-btn hvr-bounce-to-top pricingTable-signup">Buy Now</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-6">
-                    <div class="pricingTable red">
-                        <svg x="0" y="0" viewBox="0 0 360 220">
-                            <g>
-                                <path fill="#28a9e2" d="M0.732,193.75c0,0,29.706,28.572,43.736-4.512c12.976-30.599,37.005-27.589,44.983-7.061
-                                    c8.09,20.815,22.83,41.034,48.324,27.781c21.875-11.372,46.499,4.066,49.155,5.591c6.242,3.586,28.729,7.626,38.246-14.243
-                                    s27.202-37.185,46.917-8.488c19.715,28.693,38.687,13.116,46.502,4.832c7.817-8.282,27.386-15.906,41.405,6.294V0H0.48
-                                    L0.732,193.75z"></path>
-                            </g>
-                            <text transform="matrix(1 0 0 1 69.7256 116.2686)" fill="#fff" font-size="78.4489">$30</text>
-                            <text transform="matrix(0.9566 0 0 1 197.3096 83.9121)" fill="#fff" font-size="29.0829">.99</text>
-                            <text transform="matrix(1 0 0 1 233.9629 115.5303)" fill="#fff" font-size="15.4128">/Month</text>
-                        </svg>
-                        <div class="pricing-content">
-                            <h3 class="title">Premium</h3>
-                            <ul class="pricing-content">
-                                <li><b>70GB</b> Disk Space</li>
-                                <li><b>70</b> Email Accounts</li>
-                                <li><b>70GB</b> Bandwidth</li>
-                                <li><b>20</b> Subdomains</li>
-                                <li><b>25</b> Domains</li>
-                            </ul>
-                            <a href="#" class="sim-btn hvr-bounce-to-top pricingTable-signup">Buy Now</a>
-                        </div>
-                    </div>
-                </div> -->
-				<div class="col-md-12">
-					<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="padding: 0 0 100px 0;">
-						<ol class="carousel-indicators">
-							<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-							<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-							<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-						</ol>
-						<div style="overflow: hidden;">
-							<div class="carousel-item active" style="padding: 0 0 30px 0">
-								<div class="cards" style="padding: 0 20px;">
-									<div class="card2 grow">
-										<img src="/static/img/partner1.jpg" alt="Foto Tatyana Lima">
-										<h1>Tatyana Lima</h1>
-										<div style="display: flex; align-items: center; justify-content: space-between;">
-											<h3>Sócia</h3>
-											<ul class="contact-social" style="padding: 0 30px 0 0;"><div class="grow"><li><a href="#" class="social-whatsapp" target="_blank"><i class="fa fa-whatsapp"></i></a></li></div></ul>
-										</div>
-										<p>
-											• Empresária, economista, docente, mestre em Economia Aplicada
-											<br>
-											• Consultora com experiência na elaboração, análise e gestão de projetos
-											<br>
-											• Atua na administração pública desde 2013
-											<br>
-										</p>
-									</div>
-									<div class="card2 grow">
-										<img src="/static/img/partner1.jpg" alt="Foto Tatyana Lima">
-										<h1>Rúbia Barbalho</h1>
-										<div style="display: flex; align-items: center; justify-content: space-between;">
-											<h3>Sócia</h3>
-											<ul class="contact-social" style="padding: 0 30px 0 0;"><div class="grow"><li><a href="#" class="social-whatsapp" target="_blank"><i class="fa fa-whatsapp"></i></a></li></div></ul>
-										</div>
-										<p>
-											• Empresária, ex-funcionária do SEBRAE/AL, consultora especialista em Apicultura, organização de Feiras Livres, Cooperativismo e Associativismo, APLs, encadeamento produtivo, prospecção de mercado, agricultura familiar, PAA e PNAE.
-											<br>
-										</p>
-									</div>
-									<div class="card2 grow">
-										<img src="/static/img/partner1.jpg" alt="Foto Tatyana Lima">
-										<h1>Dayse Cahet</h1>
-										<div style="display: flex; align-items: center; justify-content: space-between;">
-											<h3>Sócia</h3>
-											<ul class="contact-social" style="padding: 0 30px 0 0;"><div class="grow"><li><a href="#" class="social-whatsapp" target="_blank"><i class="fa fa-whatsapp"></i></a></li></div></ul>
-										</div>
-										<p>
-											• Empresária e Consultora com experiência em Políticas Públicas nas áreas de desburocratização, compras públicas, instrumentalização de processos, implantação de Comitê de Desenvolvimento Municipal, elaboração e gestão de Convênios Municipais.
-											<br>
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="carousel-item" style="padding: 0 0 30px 0">
-								<div class="cards" style="padding: 0 20px;">
-									<div class="card2 grow">
-										<img src="/static/img/partner1.jpg" alt="Foto Tatyana Lima">
-										<h1>Francisco Rosário</h1>
-										<div style="display: flex; align-items: center; justify-content: space-between;">
-											<h3>Sócio</h3>
-											<ul class="contact-social" style="padding: 0 30px 0 0;"><div class="grow"><li><a href="#" class="social-whatsapp" target="_blank"><i class="fa fa-whatsapp"></i></a></li></div></ul>
-										</div>
-										<p>
-											• Professor Universitário, consultor, pesquisador, diretor de entidades de classe empresarial
-											<br>
-											• Analista e profissional em análise da indústria e da concorrência, inovação frugal, mapeamento de valor e em Prospectiva estratégica
-											<br>
-											• Trabalhador do conhecimento. Co-autor e editor do DE LIVROS
-											<br>
-										</p>
-									</div>
-									<div class="card2 grow">
-										<img src="/static/img/partner1.jpg" alt="Foto Tatyana Lima">
-										<h1>João de Oliveira</h1>
-										<div style="display: flex; align-items: center; justify-content: space-between;">
-											<h3>Sócio</h3>
-											<ul class="contact-social" style="padding: 0 30px 0 0;"><div class="grow"><li><a href="#" class="social-whatsapp" target="_blank"><i class="fa fa-whatsapp"></i></a></li></div></ul>
-										</div>
-										<p>
-											• Empresário e professor universitário
-											<br>
-											• Consultor de empresas nas áreas prioritárias de desenvolvimento organizacional, plano de negócios, planos tecnológicos e inovação.
-											<br>
-											• Desenvolve trabalhos nas áreas de desenvolvimento científico, tecnológico e sustentável em empresas públicas, privadas, municípios e estados.
-											<br>
-										</p>
-									</div>
-									<div class="card2 grow">
-										<img src="/static/img/partner1.jpg" alt="Foto Tatyana Lima">
-										<h1>Melry Bezerra</h1>
-										<div style="display: flex; align-items: center; justify-content: space-between;">
-											<h3>Sócia</h3>
-											<ul class="contact-social" style="padding: 0 30px 0 0;"><div class="grow"><li><a href="#" class="social-whatsapp" target="_blank"><i class="fa fa-whatsapp"></i></a></li></div></ul>
-										</div>
-										<p>
-											• Graduada em Turismo, com duas especializações na área ambiental - Gestão e Engenharia Ambiental, como também em Gestão Empresarial.
-											<br>
-											• Empresária, atual Secretária de Turismo de Mar Vermelho/AL.
-											<br>
-											• Consultora credenciada pelo SEBRAE/AL no setor de turismo e sustentabilidade
-											<br>
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="carousel-item" style="padding: 0 0 30px 0">
-								<div class="cards" style="padding: 0 20px;">
-									<div class="card2 grow">
-										<img src="/static/img/partner1.jpg" alt="Foto Tatyana Lima">
-										<h1>Dawison Calheiros</h1>
-										<div style="display: flex; align-items: center; justify-content: space-between;">
-											<h3>Sócio</h3>
-											<ul class="contact-social" style="padding: 0 30px 0 0;"><div class="grow"><li><a href="#" class="social-whatsapp" target="_blank"><i class="fa fa-whatsapp"></i></a></li></div></ul>
-										</div>
-										<p>
-											• Empresário, Consultor, Administrador, Servidor Público,
-											Especialista em Licitações e Planejamento Estratégico,
-											Diretor da Associação dos Consultores de Alagoas, Diretor
-											do Conselho Regional de Administração e Professor de
-											Pós Graduação.
-											<br>
-											• Atua na Administração Pública desde 1996.
-
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev" style="left: -130px;">
-							<span class="carousel-control-prev-icon" aria-hidden="true" style="width: 40px; height: 40px;"></span>
-							<span class="sr-only">Previous</span>
-						</a>
-						<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next" style="right: -130px;">
-							<span class="carousel-control-next-icon" aria-hidden="true" style="width: 40px; height: 40px;"></span>
-							<span class="sr-only">Next</span>
-						</a>
-					</div>
-				</div>
-            </div>
-			
-		</div>
-	</div>
-
-    <div id="contact" class="section db">
-        <div class="container">
-            <div class="section-title text-center">
-                <h3>Contato</h3>
-                <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.</p>
-            </div><!-- end title -->
-
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="contact_form">
-                        <div id="message"></div>
-                        <form id="contactForm" name="sentMessage" novalidate="novalidate">
-							<div class="row">
-								<div class="col-md-6">
-									<div class="form-group">
-										<input class="form-control" id="name" type="text" placeholder="Seu Nome" required="required" data-validation-required-message="Please enter your name.">
-										<p class="help-block text-danger"></p>
-									</div>
-									<div class="form-group">
-										<input class="form-control" id="email" type="email" placeholder="Seu Email" required="required" data-validation-required-message="Please enter your email address.">
-										<p class="help-block text-danger"></p>
-									</div>
-									<div class="form-group">
-										<input class="form-control" id="phone" type="tel" placeholder="Seu Telefone" required="required" data-validation-required-message="Please enter your phone number.">
-										<p class="help-block text-danger"></p>
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="form-group">
-										<textarea class="form-control" id="message" placeholder="Sua Menssagem" required="required" data-validation-required-message="Please enter a message."></textarea>
-										<p class="help-block text-danger"></p>
-									</div>
-								</div>
-								<div class="clearfix"></div>
-								<div class="col-lg-12 text-center">
-									<div id="success"></div>
-									<button id="sendMessageButton" class="sim-btn hvr-bounce-to-top" type="submit">Enviar Email</button>
-								</div>
-							</div>
-						</form>
-                    </div>
-                </div><!-- end col -->
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </div><!-- end section -->
 
     <div class="copyrights">
-        <div class="container">
-            <div class="footer-distributed">
+        <div class="container" style="align-items: center; justify-content: center;">
+            <!--<div class="footer-distributed">
 				<a href="#"><img src="{% static 'img/logotrns.png' %}" style="width: 230px; height: auto;" alt="" /></a>
                 <div class="footer-center">
                     <p class="footer-links">
@@ -868,7 +609,46 @@
                     <p class="footer-company-name">All Rights Reserved. &copy; 2018 <a href="#">OnNext</a> Design By : 
 					<a href="https://html.design/">html design</a></p>
                 </div>
-            </div>
+            </div> -->
+			<div class="col-md-4">
+				<div class="footer-widget">
+					<div class="footer-logo">
+						<a href="{% url 'index' %}"><img src="{% static 'img/logotrns.png' %}" height="70" width="230" alt="Logo Gestotus"></a>
+					</div>
+					<p style="margin: 13px 0;">Gestão, inovação e inspiração !</p>
+					<ul class="contact-social">
+						<li><div class="grow"><a href="https://www.facebook.com/gestotusconsultoria" target="_blank" class="social-facebook"><i class="fa fa-facebook"></i></a></div></li>
+						<li><div class="grow"><a href="https://twitter.com/gestotus" target="_blank" class="social-twitter"><i class="fa fa-twitter"></i></a></li>
+						<li><div class="grow"><a href="https://www.linkedin.com/company/gestotus-consultoria/" target="_blank" class="social-linkedin"><i class="fa fa-linkedin"></i></a></div></li>
+						<li><div class="grow"><a href="https://www.instagram.com/gestotus/?hl=pt-br" target="_blank" class="social-instagram"><i class="fa fa-instagram"></i></a></div></li>
+						<!-- <li><div class="grow"><a href="#" target="_blank" class="social-whatsapp"><i class="fa fa-whatsapp"></i></a></div></li> -->
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="footer-widget">
+					<form>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<input class="input" type="email" name="email" placeholder="Seu Email" style="background-color: #353535; border: none; border-radius: 8px;">
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="form-group">
+									<input class="input" type="text" name="subject" placeholder="Assunto" style="background-color: #353535; border: none; border-radius: 8px;">
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="form-group">
+									<textarea class="input" name="message" placeholder="Messagem" style="background-color: #353535; border: none; border-radius: 8px;"></textarea>
+								</div>
+								<button id="sendMessageButton" class="sim-btn hvr-bounce-to-top" type="submit">Enviar Email</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
         </div><!-- end container -->
     </div><!-- end copyrights -->
 
