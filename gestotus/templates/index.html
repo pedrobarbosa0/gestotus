@@ -47,7 +47,7 @@
 	
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink" id="mainNav">
-      <div class="container">
+      <div class="container" style="text-align: center;">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
 			<img class="img-fluid" src="static/img/logotrns.png" style="width: 230px;" alt="" />
 		</a>
@@ -55,7 +55,7 @@
           Menu
           <i class="fa fa-bars"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
+        <div style="text-align: center;" class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger active" href="#home">Home</a>
@@ -594,62 +594,62 @@
 	</div>
 
     <div class="copyrights">
-        <div class="container" style="align-items: center; justify-content: center;">
-            <!--<div class="footer-distributed">
-				<a href="#"><img src="{% static 'img/logotrns.png' %}" style="width: 230px; height: auto;" alt="" /></a>
-                <div class="footer-center">
-                    <p class="footer-links">
-                        <a class="nav-link js-scroll-trigger" href="#home">Home</a>
-                        <a class="nav-link js-scroll-trigger" href="#blog">Blog</a>
-                        <a class="nav-link js-scroll-trigger" href="#services">Serviços</a>
-                        <a class="nav-link js-scroll-trigger" href="#about">Sobre Nós</a>
-                        <a class="nav-link js-scroll-trigger" href="#membros">Membros</a>
-                        <a class="nav-link js-scroll-trigger" href="#contact">Contato</a>
-                    </p>
-                    <p class="footer-company-name">All Rights Reserved. &copy; 2018 <a href="#">OnNext</a> Design By : 
-					<a href="https://html.design/">html design</a></p>
-                </div>
-            </div> -->
-			<div class="col-md-4">
-				<div class="footer-widget">
-					<div class="footer-logo">
-						<a href="{% url 'index' %}"><img src="{% static 'img/logotrns.png' %}" height="70" width="230" alt="Logo Gestotus"></a>
-					</div>
-					<p style="margin: 13px 0;">Gestão, inovação e inspiração !</p>
-					<ul class="contact-social">
-						<li><div class="grow"><a href="https://www.facebook.com/gestotusconsultoria" target="_blank" class="social-facebook"><i class="fa fa-facebook"></i></a></div></li>
-						<li><div class="grow"><a href="https://twitter.com/gestotus" target="_blank" class="social-twitter"><i class="fa fa-twitter"></i></a></li>
-						<li><div class="grow"><a href="https://www.linkedin.com/company/gestotus-consultoria/" target="_blank" class="social-linkedin"><i class="fa fa-linkedin"></i></a></div></li>
-						<li><div class="grow"><a href="https://www.instagram.com/gestotus/?hl=pt-br" target="_blank" class="social-instagram"><i class="fa fa-instagram"></i></a></div></li>
-						<!-- <li><div class="grow"><a href="#" target="_blank" class="social-whatsapp"><i class="fa fa-whatsapp"></i></a></div></li> -->
-					</ul>
-				</div>
-			</div>
-			<div class="col-md-8">
-				<div class="footer-widget">
-					<form>
-						<div class="row">
-							<div class="col-md-12">
-								<div class="form-group">
-									<input class="input" type="email" name="email" placeholder="Seu Email" style="background-color: #353535; border: none; border-radius: 8px;">
-								</div>
-							</div>
-							<div class="col-md-12">
-								<div class="form-group">
-									<input class="input" type="text" name="subject" placeholder="Assunto" style="background-color: #353535; border: none; border-radius: 8px;">
-								</div>
-							</div>
-							<div class="col-md-12">
-								<div class="form-group">
-									<textarea class="input" name="message" placeholder="Messagem" style="background-color: #353535; border: none; border-radius: 8px;"></textarea>
-								</div>
-								<button id="sendMessageButton" class="sim-btn hvr-bounce-to-top" type="submit">Enviar Email</button>
-							</div>
+        <div class="container" style="justify-content: center;">
+        	<div class="row" style="padding-top: 20px;">
+				<div class="col-md-4">
+					<div class="footer-widget">
+						<div class="footer-logo">
+							<a href="{% url 'index' %}"><img src="{% static 'img/logotrns.png' %}" height="70" width="230" alt="Logo Gestotus"></a>
 						</div>
-					</form>
+						<p style="margin: 13px 0;">Gestão, inovação e inspiração !</p>
+						<ul class="contact-social">
+							<li><div class="grow"><a href="https://www.facebook.com/gestotusconsultoria" target="_blank" class="social-facebook"><i class="fa fa-facebook"></i></a></div></li>
+							<li><div class="grow"><a href="https://twitter.com/gestotus" target="_blank" class="social-twitter"><i class="fa fa-twitter"></i></a></li>
+							<li><div class="grow"><a href="https://www.linkedin.com/company/gestotus-consultoria/" target="_blank" class="social-linkedin"><i class="fa fa-linkedin"></i></a></div></li>
+							<li><div class="grow"><a href="https://www.instagram.com/gestotus/?hl=pt-br" target="_blank" class="social-instagram"><i class="fa fa-instagram"></i></a></div></li>
+							<!-- <li><div class="grow"><a href="#" target="_blank" class="social-whatsapp"><i class="fa fa-whatsapp"></i></a></div></li> -->
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="footer-widget">
+						<h3 style="color: #f2f3f5; font-weight: bold;">Informações para contato</h3>
+						<br>
+						<ul class="contact">
+							<li><i class="fa fa-phone"></i> (82)9.9690-4908 </li>
+							<li><i class="fa fa-envelope"></i> <a href="#" style="color: #97989b;">gestotusconsultoria@gmail.com</a></li>
+							<li><i class="fa fa-map-marker"></i> Maceió-Al, Brasil</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="footer-widget">
+						<h3 style="color: #f2f3f5; font-weight: bold;">Envie-nos um email</h3>
+						<br>
+						<form>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group">
+										<input class="input" type="email" name="email" placeholder="Seu Email" style="background-color: #353535; border: none; border-radius: 8px;">
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<input class="input" type="text" name="subject" placeholder="Assunto" style="background-color: #353535; border: none; border-radius: 8px;">
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<textarea class="input" name="message" placeholder="Messagem" style="background-color: #353535; border: none; border-radius: 8px;"></textarea>
+									</div>
+									<button id="sendMessageButton" class="sim-btn hvr-bounce-to-top" type="submit">Enviar Email</button>
+								</div>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
-        </div><!-- end container -->
+        </div>
     </div><!-- end copyrights -->
 
     <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
