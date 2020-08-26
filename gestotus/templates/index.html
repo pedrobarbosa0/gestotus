@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+<head>
 
     <!-- Basic -->
     <meta charset="utf-8">
@@ -18,6 +19,9 @@
 
     <!--<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png"> -->
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
@@ -107,60 +111,6 @@
             </div><!-- end title -->
 
             <div class="row">
-				<!-- <div class="col-md-4">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<i class="flaticon-seo"></i>
-						</div>
-						<h2>Web Development</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-                </div>
-                <div class="col-md-4">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<i class="flaticon-development"></i>
-						</div>
-						<h2>Responsive Design</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-                </div>
-				<div class="col-md-4">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<i class="flaticon-process"></i>
-						</div>
-						<h2>Creative Design</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-                </div>
-				<div class="col-md-4">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<i class="flaticon-discuss-issue"></i>
-						</div>
-						<h2>Support</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-                </div>
-				<div class="col-md-4">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<i class="flaticon-idea"></i>
-						</div>
-						<h2>Web Idea</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-                </div>
-				<div class="col-md-4">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<i class="flaticon-idea-1"></i>
-						</div>
-						<h2>Graphic Design</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-                </div> -->
 				<div class="col-md-6">
                     <div class="services-inner-box">
 						<div style="display: flex; align-items: center; justify-content: space-between;">
@@ -255,73 +205,6 @@
                 <h3>Cursos</h3>
                 <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.</p>
             </div><!-- end title -->
-			
-			<!-- <div class="gallery-menu row">
-				<div class="col-md-12">
-					<div class="button-group filter-button-group text-center">
-						<button class="active" data-filter="*">All</button>
-						<button data-filter=".gal_a">Web Development</button>
-						<button data-filter=".gal_b">Creative Design</button>
-						<button data-filter=".gal_c">Graphic Design</button>
-					</div>
-				</div>
-			</div> -->
-			
-			<!-- <div class="gallery-list row">
-				<div class="col-md-4 col-sm-6 gallery-grid gal_a gal_b">
-					<div class="gallery-single fix">
-						<img src="{% static 'uploads/gallery_img-01.jpg' %}" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="{% static 'uploads/gallery_img-01.jpg' %}" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-4 col-sm-6 gallery-grid gal_c gal_b">
-					<div class="gallery-single fix">
-						<img src="{% static 'uploads/gallery_img-02.jpg' %}" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="{% static 'uploads/gallery_img-02.jpg' %}" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-4 col-sm-6 gallery-grid gal_a gal_c">
-					<div class="gallery-single fix">
-						<img src="{% static 'uploads/gallery_img-03.jpg' %}" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="{% static 'uploads/gallery_img-03.jpg' %}" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-4 col-sm-6 gallery-grid gal_b gal_a">
-					<div class="gallery-single fix">
-						<img src="{% static 'uploads/gallery_img-04.jpg' %}" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="{% static 'uploads/gallery_img-04.jpg' %}" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-4 col-sm-6 gallery-grid gal_a gal_c">
-					<div class="gallery-single fix">
-						<img src="{% static 'uploads/gallery_img-05.jpg' %}" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="{% static 'uploads/gallery_img-05.jpg' %}" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-4 col-sm-6 gallery-grid gal_c gal_a">
-					<div class="gallery-single fix">
-						<img src="{% static 'uploads/gallery_img-06.jpg' %}" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="{% static 'uploads/gallery_img-06.jpg' %}" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-			</div> -->
 			<div class="cards">
 				<div class="card2 grow">
 					<img src="/static/img/logo_principal.jpg" alt="">
@@ -479,91 +362,6 @@
 			</div><!-- end title -->
 		
 			<div class="row">
-				<!--<div class="col-md-3 col-sm-6">
-					<div class="our-team">
-						<div class="pic">
-							<img src="img/doutor-licitacao-wide-logo.png">
-						</div>
-						<div class="team-content">
-							<h3 class="title">Kristiana</h3>
-							<span class="post">Web Designer</span>
-							<ul class="social">
-								<li><a href="#" class="fa fa-facebook"></a></li>
-								<li><a href="#" class="fa fa-twitter"></a></li>
-								<li><a href="#" class="fa fa-google-plus"></a></li>
-								<li><a href="#" class="fa fa-skype"></a></li>
-							</ul>
-						</div>
-					</div>
-				</div> -->
-				
-				<!-- <div class="col-md-3 col-sm-6">
-					<div class="our-team">
-						<div class="pic">
-							<img src="img/fonte-preco-logo.png">
-						</div>
-						<div class="team-content">
-							<h3 class="title">Miranda joy</h3>
-							<span class="post">Web Designer</span>
-							<ul class="social">
-								<li><a href="#" class="fa fa-facebook"></a></li>
-								<li><a href="#" class="fa fa-twitter"></a></li>
-								<li><a href="#" class="fa fa-google-plus"></a></li>
-								<li><a href="#" class="fa fa-skype"></a></li>
-							</ul>
-						</div>
-					</div>
-				</div> -->
-				
-				<!-- <div class="col-md-3 col-sm-6">
-					<div class="our-team">
-						<div class="pic">
-							<img src="img/licitotus-wide-logo.png">
-						</div>
-						<div class="team-content">
-							<h3 class="title">Williamson</h3>
-							<span class="post">Web Developer</span>
-							<ul class="social">
-								<li><a href="#" class="fa fa-facebook"></a></li>
-								<li><a href="#" class="fa fa-twitter"></a></li>
-								<li><a href="#" class="fa fa-google-plus"></a></li>
-								<li><a href="#" class="fa fa-skype"></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="card2 grow">
-						<img src="img/doutor-licitacao-wide-logo.png" alt="Logo Doutor Licitação">
-						<div style="display: flex; align-items: center; justify-content: space-between;">
-							<h3>Doutor Licitação</h3>
-							<ul class="contact-social" style="padding: 0 20px 0 0;"><div class="grow"><li><a href="https://www.instagram.com/drlicitacao/" class="social-instagram" target="_blank"><i class="fa fa-instagram"></i></a></li></div></ul>
-						</div>
-					</div>
-				</div> -->
-				
-				<!-- <div class="col-md-3 col-sm-6">
-					<div class="our-team">
-						<div class="pic">
-							<img src="img/x2-licitacoes-logo.png">
-						</div>
-						<div class="team-content">
-							<h3 class="title">Steve Thomas</h3>
-							<span class="post">Web Developer</span>
-							<ul class="social">
-								<li><a href="#" class="fa fa-facebook"></a></li>
-								<li><a href="#" class="fa fa-twitter"></a></li>
-								<li><a href="#" class="fa fa-google-plus"></a></li>
-								<li><a href="#" class="fa fa-skype"></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="card2 grow">
-						<img src="img/licitotus-wide-logo.png" alt="Logo Licitotus">
-						<div style="display: flex; align-items: center; justify-content: space-between;">
-							<h3>Licitotus</h3>
-							<ul class="contact-social" style="padding: 0 20px 0 0;"><div class="grow"><li><a href="https://twitter.com/licitotus" class="social-twitter" target="_blank"><i class="fa fa-twitter"></i></a></li></div></ul>
-						</div>
-					</div>
-				</div> -->
 				<div class="col-md-12">
 					<div class="cards">
 						<div class="card2 grow">
@@ -613,7 +411,7 @@
 				</div>
 				<div class="col-md-4">
 					<div class="footer-widget">
-						<h3 style="color: #f2f3f5; font-weight: bold;">Informações para contato</h3>
+						<h3 style="color: #97989b; font-weight: bold; font-family: Roboto; font-size: 16px;">Informações para contato</h3>
 						<br>
 						<ul class="contact">
 							<li><i class="fa fa-phone"></i> (82)9.9690-4908 </li>
@@ -624,7 +422,7 @@
 				</div>
 				<div class="col-md-4">
 					<div class="footer-widget">
-						<h3 style="color: #f2f3f5; font-weight: bold;">Envie-nos um email</h3>
+						<h3 style="color: #97989b; font-weight: bold; font-family: Roboto; font-size: 16px; padding-bottom: 1px;">Envie-nos um email</h3>
 						<br>
 						<form>
 							<div class="row">

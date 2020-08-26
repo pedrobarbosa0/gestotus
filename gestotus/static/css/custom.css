@@ -8,6 +8,12 @@
     grid-template-columns:  1fr 1fr 1fr;
     gap: 24px;
   }
+.cards2 {
+  display: grid;
+  grid-template-columns: 3fr;
+  gap: 24px;
+  padding: 0 150px;
+}
   
   div.card2 {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -33,7 +39,7 @@
   }
   
   .card2 h3 {
-    margin: 15px 0 24px 20px;
+    margin: 15px 0 15px 20px;
     font-family: Roboto, sans-serif;
     font-weight: bold;
     font-size: 20px;
@@ -91,13 +97,17 @@
 
   @media (max-width: 900px) {
     .cards {
-        grid-template-columns: 1fr;
+      grid-template-columns: 1fr;
+    }
+    .cards2 {
+      grid-template-columns: 1fr;
+      padding: 0 20px;
     }
     .grow {
-        transition: none;
+      transition: none;
     }
     .grow:hover {
-        transform: none;
+      transform: none;
     }
 }
 
