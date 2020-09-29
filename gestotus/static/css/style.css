@@ -679,6 +679,21 @@ xclip
     z-index: 0;
 } */
 
+.sub-services{
+    display: none;
+}
+
+.title-services{
+    font-size: 16px;
+}
+
+.title-services:hover{
+    text-decoration: underline;
+}
+
+.title-services:hover + .sub-services{
+    display: block;
+}
 
 .about-section-text{
     box-shadow: 0px 5px 5px 0px rgba(194,194,194,1);
