@@ -111,93 +111,28 @@
             </div><!-- end title -->
 
             <div class="row">
-				<div class="col-md-6">
-					<div class="services-inner-box">
-						<div style="text-align: center; margin-top: 20px;">
-							<h2>Gestão Pública</h2>
+				{% for area in areas %}
+					<div class="col-md-6">
+						<div class="services-inner-box">
+							<div style="text-align: center; margin-top: 20px;">
+								<h2>{{area.nome}}</h2>
+							</div>
+							<br>
+							<ul style="color: #333333">
+								{% for categoria in area.categorias.all %}
+									<li>
+										<span class="title-services">{{categoria.nome}}</span>
+										<ul class="sub-services">
+											{% for servico in categoria.servicos.all %}
+												<li>- {{servico.nome}}</li>
+											{% endfor %}
+										</ul>
+									</li>
+								{% endfor %}
+							</ul>
 						</div>
-						<br>
-						<ul style="color: #333333">
-							<li>
-								<span class="title-services">Assessoria</span>
-								<ul class="sub-services">
-									<li>- Incremento das Receitas Municipais e Racionalização das Despesas</li>
-									<li>- Modernização da Administração Pública Municipal</li>
-									<li>- Elaboração de Relatório de Gestão</li>
-									<li>- Assessoria em Controle Interno</li>
-									<li>- Treinamento de Pessoal Técnico e Administrativo</li>
-									<li>- Governança Pública</li>
-									<li>- Desenvolvimento de metodologia para monitoramento da gestão</li>
-								</ul>
-							</li>
-							<li>
-								<span class="title-services">Desenvolvimento Regional</span>
-								<ul class="sub-services">
-									<li>- Construção de cenários para o desenvolvimento local</li>
-									<li>- Desenvolvimento Municipal</li>
-									<li>- Diagnóstico e Planejamento Estratégico</li>
-									<li>- Desenvolvimento de metodologia para monitoramento da gestão</li>
-									<li>- Planejamento para trabalho com Agricultura Familiar, PAA e PNAE</li>
-								</ul>
-							</li>
-							<li>
-								<span class="title-services">Compras Públicas</span>
-								<ul class="sub-services">
-									<li>- Consultoria de Licitações e Contratos</li>
-									<li>- Gestão, capacitação e desenvolvimento de compras públicas</li>
-									<li>- Gestão de contrato, Instrução e fluxo processual</li>
-								</ul>
-							</li>
-							<li>
-								<span class="title-services">Projetos, Convênios e Pesquisas</span>
-								<ul class="sub-services">
-									<li>- Elaboração e Gestão de Projetos</li>
-									<li>- Captação de Recursos</li>
-									<li>- Convênios e Prestação de Contas</li>
-									<li>- Diagnostico, pesquisa e mapeamento de vocação produtiva</li>
-									<li>- Interpretação, elaboração, gestão, execução e prestação de contas de editais de fomento</li>
-								</ul>
-							</li>
-						</ul>
 					</div>
-                </div>
-				<div class="col-md-6">
-					<div class="services-inner-box">
-	                	<div style="text-align: center; margin-top: 20px; color:">
-							<h2>Gestão Empresarial</h2>
-						</div>
-						<br>
-						<ul style="color: #333333">
-							<li>
-								<span class="title-services">Diagnósticos e Estratégias Empresariais</span>
-								<ul class="sub-services">
-									<li>- Diagnóstico e Planejamento Estratégico</li>
-									<li>- Diagnóstico Organizacional</li>
-									<li>- Modelagem de negócios Locais</li>
-									<li>- Soluções para Gestão</li>
-									<li>- Consultoria em Tecnologia da Informação</li>
-								</ul>
-							</li>
-							<li>
-								<span class="title-services">Organização, Desenvolvimento e Sustentabilidade Empresarial</span>
-								<ul class="sub-services">
-									<li>- Governança Corporativa</li>
-									<li>- Desenvolvimento de metodologia para monitoramento da gestão</li>
-									<li>- Treinamento de Pessoal Técnico e Administrativo</li>
-									<li>- Desenvolvimento e atualização de Plano de Negócio</li>
-								</ul>
-							</li>
-							<li>
-								<span class="title-services">Projetos, Convênios e Pesquisas</span>
-								<ul class="sub-services">
-									<li>- Estudos de Análise e Viabilidade Econômico-financeira</li>
-									<li>- Interpretação, elaboração, gestão, execução e prestação de contas de editais de fomento</li>
-									<li>- Pesquisa de Mercado</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-                </div>
+				{% endfor %}
             </div><!-- end row -->
         </div><!-- end container -->
     </div><!-- end section -->
@@ -209,30 +144,16 @@
                 <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.</p>
             </div><!-- end title -->
 			<div class="cards">
-				<div class="card3 grow">
-					<img src="/static/img/logo_principal.jpg" alt="">
-					<h1>Curso 1</h1>
-					<p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.Quisque eget nisl id nulla sagittis auctor quis id.</p>
-					<div style="justify-content: center; display: flex; padding: 0;">
-						<a href="#" class="sim-btn hvr-bounce-to-top" style="width: 100%; border-radius: 0px 0px 12px 12px; padding: 12px 20px;"><span>Inscreva-se</span></a>
+				{% for curso in cursos %}
+					<div class="card3 grow">
+						<img src="{{curso.imagem.url}}" alt="">
+						<h1>{{curso.titulo}}</h1>
+						<p>{{curso.descricao}}</p>
+						<div style="justify-content: center; display: flex; padding: 0;">
+							<a target="_blank" href="{{curso.link}}" class="sim-btn hvr-bounce-to-top" style="width: 100%; border-radius: 0px 0px 12px 12px; padding: 12px 20px;"><span>Inscreva-se</span></a>
+						</div>
 					</div>
-				</div>
-				<div class="card3 grow">
-					<img src="/static/img/logo_principal.jpg" alt="">
-					<h1>Curso 1</h1>
-					<p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.Quisque eget nisl id nulla sagittis auctor quis id.</p>
-					<div style="justify-content: center; display: flex; padding: 0;">
-						<a href="#" class="sim-btn hvr-bounce-to-top" style="width: 100%; border-radius: 0px 0px 12px 12px; padding: 12px 20px;"><span>Inscreva-se</span></a>
-					</div>
-				</div>
-				<div class="card3 grow">
-					<img src="/static/img/logo_principal.jpg" alt="">
-					<h1>Curso 1</h1>
-					<p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.Quisque eget nisl id nulla sagittis auctor quis id.</p>
-					<div style="justify-content: center; display: flex; padding: 0;">
-						<a href="#" class="sim-btn hvr-bounce-to-top"style="width: 100%; border-radius: 0px 0px 12px 12px; padding: 12px 20px;"><span>Inscreva-se</span></a>
-					</div>
-				</div>
+				{% endfor %}
 			</div>
 			<a href="/blog" class="sim-btn hvr-bounce-to-top" style="margin: 40px 465px 0px 465px; padding: 8px 60px; border-radius: 6px;"><span>Ver Mais</span></a>
 		</div>
@@ -246,26 +167,18 @@
             </div><!-- end title -->
 			
 			<div class="cards2">
-				<div class="card-blog grow">
-					<img src="/static/img/logo_principal.jpg" alt="">
-					<div class="container-card" style="position: relative;">
-						<div class="date-block">
-							<h2>12 jan 2020</h2>
+				{% for artigo in artigos %}
+					<div class="card-blog grow">
+						<img src="{{artigo.imagem.url}}" alt="">
+						<div class="container-card" style="position: relative;">
+							<div class="date-block">
+								<h2>{{artigo.data_criacao|date:"j M Y"}}</h2>
+							</div>
 						</div>
+						<h1>{{artigo.titulo}}</h1>
+						<p>{{artigo.resumo}}</p>
 					</div>
-					<h1>Artigo 1</h1>
-					<p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.Quisque eget nisl id nulla sagittis auctor quis id.</p>
-				</div>
-				<div class="card-blog grow">
-					<img src="/static/img/logo_principal.jpg" alt="">
-					<div class="container-card" style="position: relative;">
-						<div class="date-block">
-							<h2>12 jan 2020</h2>
-						</div>
-					</div>
-					<h1>Artigo 1</h1>
-					<p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.Quisque eget nisl id nulla sagittis auctor quis id.</p>
-				</div>
+				{% endfor %}
 			</div>
 
 			<a href="/blog" class="sim-btn hvr-bounce-to-top" style="margin: 40px 465px 0px 465px; padding: 8px 60px; border-radius: 6px;"><span>Ver Mais</span></a>
@@ -393,27 +306,15 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="cards">
-						<div class="card3 grow">
-							<a href="https://www.instagram.com/doutor.licitacao/" target="_blank"><img src="{% static 'img/doutor-licitacao-wide-logo.png' %}" alt="Logo Doutor Licitação"></a>
-							<!-- <div style="display: flex; align-items: center; justify-content: space-between;">
-								<h3>Doutor Licitação</h3>
-								<ul class="contact-social" style="padding: 0 30px 0 0;"><div class="grow"><li><a href="https://www.instagram.com/doctorlicitacao/" class="social-instagram" target="_blank"><i class="fa fa-instagram"></i></a></li></div></ul>
-							</div> -->
-						</div>
-						<div class="card3 grow">
-							<a href="http://sururutalks.com/" target="_blank"><img src="{% static 'img/download.jpg' %}" alt="Logo Sururu Talks"></a>
-							<!--<div style="display: flex; align-items: center; justify-content: space-between;">
-								<h3>Sururu Talks</h3>
-								<ul class="contact-social" style="padding: 0 30px 0 0;"><div class="grow"><li><a href="http://sururutalks.com/" class="social-web" target="_blank"><i class="fa fa-globe"></i></a></li></div></ul>
-							</div> -->
-						</div>
-						<div class="card3 grow">
-							<a href="https://www.fontedeprecos.com.br/" target="_blank"><img src="{% static 'img/fonte-preco-wide-logo.png' %}" alt="Logo Fonte de Preços"></a>
-							<!--<div style="display: flex; align-items: center; justify-content: space-between;">
-								<h3>Fonte de Preços</h3>
-								<ul class="contact-social" style="padding: 0 30px 0 0;"><div class="grow"><li><a href="https://www.fontedeprecos.com.br/" class="social-web" target="_blank"><i class="fa fa-globe"></i></a></li></div></ul>
-							</div> -->
-						</div>
+						{% for parceiro in parceiros %}
+							<div class="card3 grow">
+								<a href="{{ parceiro.link }}" target="_blank"><img src="{{parceiro.imagem.url}}" alt="Logo Doutor Licitação"></a>
+								<!-- <div style="display: flex; align-items: center; justify-content: space-between;">
+									<h3>Doutor Licitação</h3>
+									<ul class="contact-social" style="padding: 0 30px 0 0;"><div class="grow"><li><a href="https://www.instagram.com/doctorlicitacao/" class="social-instagram" target="_blank"><i class="fa fa-instagram"></i></a></li></div></ul>
+								</div> -->
+							</div>
+						{% endfor %}
 					</div>
 				</div>
 			</div>

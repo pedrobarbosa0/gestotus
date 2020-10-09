@@ -103,7 +103,7 @@
                 <div class="col-md-6 about-cols">
                 	<div class="about-section-text">
 	                    <h2>Quem Somos</h2>
-	                    <p>A GESTOTUS Consultoria, Assessoria e Treinamento criada em 2015, atua em serviços de consultoria, assessoria e capacitação voltados para gestão pública e privada, com expertise em interpretação, elaboração, gestão, execução e prestação de contas de editais; diagnóstico, pesquisa e mapeamento de vocação produtiva; construção de cenários para o desenvolvimento local; elaboração e monitoramento de indicadores; modelagem de negócios locais; gestão de contratos, instrução e fluxo processual; desenho/estrutura de Lei Delegada; licitação; gestão, capacitação e desenvolvimento de compras públicas; planejamento empresarial.</p>
+	                    <p>{{quem_somos.descricao}}</p>
 						<div>
 							<ul class="contact-social">
 								<li><div class="grow"><a href="https://www.facebook.com/gestotusconsultoria" target="_blank" class="social-facebook"><i class="fa fa-facebook"></i></a></div></li>
@@ -117,7 +117,7 @@
 
                 <div class="col-md-6 about-cols">
                     <div class="right-box-pro wow fadeIn">
-                        <img src="{% static 'img/IMG-20191008-WA0012.jpg' %}" alt="" class="img-fluid img-rounded">
+                        <img src="{{quem_somos.imagem.url}}" alt="" class="img-fluid img-rounded">
                     </div><!-- end media -->
                 </div><!-- end col -->
             </div><!-- end row -->
@@ -134,177 +134,23 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div id="recipeCarousel" class="carousel slide" data-ride="carousel">
-						<!-- <ol class="carousel-indicators">
-							<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-							<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-							<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-							<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-							<li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-							<li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-							<li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
-						</ol> -->
 						<div class="carousel-inner w-100" role="listbox" style="overflow: hidden;">
-							<div class="carousel-item active" style="padding: 30px 0">
-								<!-- <div class="cards"> -->
+							{% for membro in membros %}
+								<div class="carousel-item {% if forloop.counter0 == 0 %}active{% endif %}" style="padding: 30px 0">
 									<div class="card2 grow">
-										<img src="/static/img/tatyanalima.jpeg" alt="Foto Tatyana Lima">
+										<img src="{{ membro.imagem.url }}" alt="Foto Tatyana Lima">
 										<div class="container-card" style="position: relative;">
 											<div class="text-block">
-												<h1>Tatyana Lima</h1>
-												<h3>Sócia</h3>
+												<h1>{{membro.nome}}</h1>
+												<h3>{{membro.cargo}}</h3>
 											</div>
 										</div>
-										<!-- <div style="display: flex; align-items: center; justify-content: space-between;">
-											<ul class="contact-social" style="padding: 0 30px 0 0;"><div class="grow"><li><a href="#" class="social-whatsapp" target="_blank"><i class="fa fa-whatsapp"></i></a></li></div></ul>
-										</div> -->
 										<p>
-											Economista, docente, consultora nas áreas de inovação e diagnóstico e estratégia empresarial, com experiência na elaboração, gestão, execução e prestação de contas de projetos empresariais e públicos.
-											<!-- • Empresária, economista, docente, mestre em Economia Aplicada
-											<br>
-											• Consultora com experiência na elaboração, análise e gestão de projetos
-											<br> -->
+											{{membro.descricao}}
 										</p>
 									</div>
-								<!-- </div> -->
-							</div>
-							<div class="carousel-item" style="padding: 30px 0">
-								<!-- <div class="cards"> -->
-									<div class="card2 grow">
-										<img src="/static/img/partner1.jpg" alt="Foto Rúbia Barbalho">
-										<div class="container-card" style="position: relative;">
-											<div class="text-block">
-												<h1>Rúbia Barbalho</h1>
-												<h3>Sócia</h3>
-											</div>
-										</div>
-										<!-- <div style="display: flex; align-items: center; justify-content: space-between;">
-											<ul class="contact-social" style="padding: 0 30px 0 0;"><div class="grow"><li><a href="#" class="social-whatsapp" target="_blank"><i class="fa fa-whatsapp"></i></a></li></div></ul>
-										</div> -->
-										<p>
-											Pedagoga, consultora com experiências nas áreas de compras públicas rurais, PNAE, negócios no campo; apicultura; desenvolvimento territorial e análise de mercado para negócios.
-											<!-- • Empresária, economista, docente, mestre em Economia Aplicada
-											<br>
-											• Consultora com experiência na elaboração, análise e gestão de projetos
-											<br> -->
-										</p>
-									</div>
-								<!-- </div> -->
-							</div>
-							<div class="carousel-item" style="padding: 30px 0">
-								<!-- <div class="cards"> -->
-									<div class="card2 grow">
-										<img src="/static/img/daysecahet.jpeg" alt="Foto Dayse Cahet">
-										<div class="container-card" style="position: relative;">
-											<div class="text-block">
-												<h1>Dayse Cahet</h1>
-												<h3>Sócia</h3>
-											</div>
-										</div>
-										<!-- <div style="display: flex; align-items: center; justify-content: space-between;">
-											<ul class="contact-social" style="padding: 0 30px 0 0;"><div class="grow"><li><a href="#" class="social-whatsapp" target="_blank"><i class="fa fa-whatsapp"></i></a></li></div></ul>
-										</div> -->
-										<p>
-											Administradora, consultora e assessora parlamentar. Com experiência em convênios, prestação de contas, compras públicas, contratos, licitação, análise de editais e instrumentalização de processos. 
-											<!-- • Empresária, economista, docente, mestre em Economia Aplicada
-											<br>
-											• Consultora com experiência na elaboração, análise e gestão de projetos
-											<br> -->
-										</p>
-									</div>
-								<!-- </div> -->
-							</div>
-							<div class="carousel-item" style="padding: 30px 0">
-								<!-- <div class="cards"> -->
-									<div class="card2 grow">
-										<img src="/static/img/franciscorosario.jpeg" alt="Francisco Rosário">
-										<div class="container-card" style="position: relative;">
-											<div class="text-block">
-												<h1>Francisco Rosário</h1>
-												<h3>Sócio</h3>
-											</div>
-										</div>
-										<!-- <div style="display: flex; align-items: center; justify-content: space-between;">
-											<ul class="contact-social" style="padding: 0 30px 0 0;"><div class="grow"><li><a href="#" class="social-whatsapp" target="_blank"><i class="fa fa-whatsapp"></i></a></li></div></ul>
-										</div> -->
-										<p>
-											Economista de empresas, docente, pesquisador, designer de negócios, consultor nas áreas de inovação, modelagem de negócios e pesquisa de mercado. 
-											<!-- • Empresária, economista, docente, mestre em Economia Aplicada
-											<br>
-											• Consultora com experiência na elaboração, análise e gestão de projetos
-											<br> -->
-										</p>
-									</div>
-								<!-- </div> -->
-							</div>
-							<div class="carousel-item" style="padding: 30px 0">
-								<!-- <div class="cards"> -->
-									<div class="card2 grow">
-										<img src="/static/img/joaogeraldo.jpeg" alt="Foto João de Oliveira">
-										<div class="container-card" style="position: relative;">
-											<div class="text-block">
-												<h1>João de Oliveira</h1>
-												<h3>Sócio</h3>
-											</div>
-										</div>
-										<!-- <div style="display: flex; align-items: center; justify-content: space-between;">
-											<ul class="contact-social" style="padding: 0 30px 0 0;"><div class="grow"><li><a href="#" class="social-whatsapp" target="_blank"><i class="fa fa-whatsapp"></i></a></li></div></ul>
-										</div> -->
-										<p>
-											Administrador, docente, consultor em desenvolvimento organizacional, planos de negócios, planos tecnológicos, científicos, sustentáveis e de inovação para setor público e empresarial.
-											<!-- • Empresária, economista, docente, mestre em Economia Aplicada
-											<br>
-											• Consultora com experiência na elaboração, análise e gestão de projetos
-											<br> -->
-										</p>
-									</div>
-								<!-- </div> -->
-							</div>
-							<div class="carousel-item" style="padding: 30px 0">
-								<!-- <div class="cards"> -->
-									<div class="card2 grow">
-										<img src="/static/img/mellbezerra.jpeg" alt="Foto Tatyana Lima">
-										<div class="container-card" style="position: relative;">
-											<div class="text-block">
-												<h1>Melry Bezerra</h1>
-												<h3>Sócia</h3>
-											</div>
-										</div>
-										<!-- <div style="display: flex; align-items: center; justify-content: space-between;">
-											<ul class="contact-social" style="padding: 0 30px 0 0;"><div class="grow"><li><a href="#" class="social-whatsapp" target="_blank"><i class="fa fa-whatsapp"></i></a></li></div></ul>
-										</div> -->
-										<p>
-											Gestora Pública e Turismóloga, consultora de Turismo, Desenvolvimento Sustentável, Gestão de Empresas e Estratégia de Negócios. Com experiência em elaboração de Plano de Desenvolvimento Municipal.
-											<!-- • Empresária, economista, docente, mestre em Economia Aplicada
-											<br>
-											• Consultora com experiência na elaboração, análise e gestão de projetos
-											<br> -->
-										</p>
-									</div>
-								<!-- </div> -->
-							</div>
-							<div class="carousel-item" style="padding: 30px 0">
-								<!-- <div class="cards"> -->
-									<div class="card2 grow">
-										<img src="/static/img/dawison.jpeg" alt="Foto Dawison Calheiros">
-										<div class="container-card" style="position: relative;">
-											<div class="text-block">
-												<h1>Dawison Calheiros</h1>
-												<h3>Sócio</h3>
-											</div>
-										</div>
-										<!-- <div style="display: flex; align-items: center; justify-content: space-between;">
-											<ul class="contact-social" style="padding: 0 30px 0 0;"><div class="grow"><li><a href="#" class="social-whatsapp" target="_blank"><i class="fa fa-whatsapp"></i></a></li></div></ul>
-										</div> -->
-										<p>
-											Administrador, docente, consultor empresarial  nas áreas de licitações, contratos, compras públicas, Políticas públicas e planejamento estratégico. 
-											<!-- • Empresária, economista, docente, mestre em Economia Aplicada
-											<br>
-											• Consultora com experiência na elaboração, análise e gestão de projetos
-											<br> -->
-										</p>
-									</div>
-								<!-- </div> -->
-							</div>
+								</div>
+							{% endfor %}
 						</div>
 						<a class="carousel-control-prev" href="#recipeCarousel" role="button" data-slide="prev" style="left: -130px;">
 							<span class="carousel-control-prev-icon" aria-hidden="true" style="width: 40px; height: 40px;"></span>
