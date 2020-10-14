@@ -45,7 +45,7 @@ INSTALLED_APPS += [
     "gestotus.blog",
     "gestotus.parceiros",
     "gestotus.servicos",
-    "gestotus.sobre",
+    "gestotus.sobre"
 ]
 
 MIDDLEWARE = [
