@@ -3,6 +3,69 @@
 	height: 100%;
 }
 
+.drlicitacao {
+  background: linear-gradient(to right, #60B6E5 0%, rgba(96, 182, 229, 0.3) 100%);
+  height: 135px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 75px 0;
+}
+
+.drlicitacao img {
+  height: 276px;
+}
+
+.drlicitacao-texts {
+  max-width: 320px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.drlicitacao-texts h2 {
+  margin-top: 10px;
+  font-size: 24px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  align-self: center;
+  line-height: 290px;
+  color: white;
+  padding: 0;
+  text-align: center;
+}
+
+.drlicitacao-texts h4 {
+  margin-top: 10px;
+  font-size: 16px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  align-self: center;
+  line-height: 195px;
+  color: black;
+  padding: 0;
+  text-align: center;
+}
+
+@media (max-width: 675px) {
+  .drlicitacao {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+  }
+  
+  .drlicitacao img {
+    height: 215px;
+  }
+
+  .drlicitacao-texts {
+    margin-bottom: 15px;
+  }
+}
+
+
 .carousel-inner .carousel-item-right,
 .carousel-inner .carousel-item-left{ 
   transform: translateX(0);
