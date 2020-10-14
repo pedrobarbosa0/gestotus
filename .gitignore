@@ -89,3 +89,4 @@ local_settings.py
 ### Folder ###
 sitestatic
 myvenv
+media/
