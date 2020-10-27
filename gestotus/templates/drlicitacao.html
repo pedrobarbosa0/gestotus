@@ -1,0 +1,182 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 
+    <!-- Site Metas -->
+    <title>Gestotus</title>  
+	<link rel="icon" href="../static/img/head-icon-logo.png" type="image/x-icon">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!--<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png"> -->
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Ubuntu:wght@700&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+	<script src="{% static 'js/modernizr.js' %}"></script> <!-- Modernizr -->
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body id="page-top" class="politics_version">
+
+    <!-- LOADER -->
+    <!--<div id="preloader">
+        <div id="main-ld">
+			<div id="loader"></div>  
+		</div>
+    </div>--><!-- end loader -->
+    <!-- END LOADER -->
+	
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+			<img class="img-fluid" src="../static/img/logotrns.png" style="width: 230px;" alt="" />
+		</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'index' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="{% url 'about' %}">Sobre Nós</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+	
+	<section id="home">
+        <div class="drlicitacao">
+            <img src="../static/img/doutor-licitacao-logo.png" alt="Doutor Licitação">
+            <div class="col-8" style="width: 500px; height: 300px; display: inline-grid; justify-content: center; align-items: center;">
+                <div class="drlicitacao-texts" style="max-width: none;">
+                    <h4>O que você está procurando ?</h4>
+                </div>
+                <div>
+                    <div class="row justify-content-around">
+                        <a href="/drlicitacao" class="drlicitacao-buttons sim-btn hvr-bounce-to-top" style="margin: 10px  20px;padding: 2px 60px; border-radius: 6px;"><span>Saiba Mais</span></a>
+                        <a href="/drlicitacao" class="drlicitacao-buttons sim-btn hvr-bounce-to-top" style="margin: 10px  20px;padding: 2px 60px; border-radius: 6px;"><span>Saiba Mais</span></a>
+                        <a href="/drlicitacao" class="drlicitacao-buttons sim-btn hvr-bounce-to-top" style="margin: 10px 20px;padding: 2px 60px; border-radius: 6px;"><span>Saiba Mais</span></a>
+                    </div>
+                    <div class="row justify-content-center">
+                        <a href="/drlicitacao" class="drlicitacao-buttons sim-btn hvr-bounce-to-top" style="margin: 10px  20px;padding: 2px 60px; border-radius: 6px;"><span>Saiba Mais</span></a>
+                        <a href="/drlicitacao" class="drlicitacao-buttons sim-btn hvr-bounce-to-top" style="margin: 10px  20px;padding: 2px 60px; border-radius: 6px;"><span>Saiba Mais</span></a>
+                    </div>
+                    <div class="row justify-content-around">
+                        <a href="/drlicitacao" class="drlicitacao-buttons sim-btn hvr-bounce-to-top" style="margin: 10px 20px;padding: 2px 60px; border-radius: 6px;"><span>Saiba Mais</span></a>
+                        <a href="/drlicitacao" class="drlicitacao-buttons sim-btn hvr-bounce-to-top" style="margin: 10px 20px;padding: 2px 60px; border-radius: 6px;"><span>Saiba Mais</span></a>
+                        <a href="/drlicitacao" class="drlicitacao-buttons sim-btn hvr-bounce-to-top" style="margin: 10px 20px;padding: 2px 60px; border-radius: 6px;"><span>Saiba Mais</span></a>
+                    </div>
+                    <div class="row justify-content-center">
+                        <a href="/drlicitacao" class="drlicitacao-buttons sim-btn hvr-bounce-to-top" style="margin: 10px 20px;padding: 2px 60px; border-radius: 6px;"><span>Saiba Mais</span></a>
+                        <a href="/drlicitacao" class="drlicitacao-buttons sim-btn hvr-bounce-to-top" style="margin: 10px 20px;padding: 2px 60px; border-radius: 6px;"><span>Saiba Mais</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</section>
+
+    <div class="copyrights">
+        <div class="container" style="justify-content: center;">
+        	<div class="row" style="padding-top: 20px;">
+				<div class="col-md-4">
+					<div class="footer-widget">
+						<div class="footer-logo">
+							<a href="{% url 'index' %}"><img src="{% static 'img/logotrns.png' %}" height="70" width="230" alt="Logo Gestotus"></a>
+						</div>
+						<p style="margin: 13px 0;">Gestão, inovação e inspiração !</p>
+						<ul class="contact-social">
+							<li><div class="grow"><a href="https://www.facebook.com/gestotusconsultoria" target="_blank" class="social-facebook"><i class="fa fa-facebook"></i></a></div></li>
+							<li><div class="grow"><a href="https://twitter.com/gestotus" target="_blank" class="social-twitter"><i class="fa fa-twitter"></i></a></li>
+							<li><div class="grow"><a href="https://www.linkedin.com/company/gestotus-consultoria/" target="_blank" class="social-linkedin"><i class="fa fa-linkedin"></i></a></div></li>
+							<li><div class="grow"><a href="https://www.instagram.com/gestotus/?hl=pt-br" target="_blank" class="social-instagram"><i class="fa fa-instagram"></i></a></div></li>
+							<!-- <li><div class="grow"><a href="#" target="_blank" class="social-whatsapp"><i class="fa fa-whatsapp"></i></a></div></li> -->
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="footer-widget">
+						<h3 style="color: #97989b; font-weight: 600; font-family: Montserrat; font-size: 16px;">Informações para contato</h3>
+						<ul class="contact">
+							<li><i class="fa fa-phone"></i> (82)9.9690-4908 </li>
+							<li><i class="fa fa-envelope"></i> <a href="#" style="color: #97989b;">gestotusconsultoria@gmail.com</a></li>
+							<li><i class="fa fa-map-marker"></i> Maceió-Al, Brasil</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="footer-widget">
+						<h3 style="color: #97989b; font-weight: 600; font-family: Montserrat; font-size: 16px; padding-bottom: 16px;">Envie-nos um email</h3>
+						<form>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group" style="margin-bottom: 0.8rem;">
+										<input class="input" type="email" name="email" placeholder="Seu Email" style="background-color: #353535; border: none; border-radius: 6px;">
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group" style="margin-bottom: 0.8rem;">
+										<input class="input" type="text" name="subject" placeholder="Assunto" style="background-color: #353535; border: none; border-radius: 6px;">
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group" style="margin-bottom: 0.8rem;">
+										<textarea class="input" name="message" placeholder="Messagem" style="background-color: #353535; border: none; border-radius: 6px;"></textarea>
+									</div>
+									<button id="sendMessageButton" class="sim-btn hvr-bounce-to-top" style="padding: 7px 20px; border-radius: 6px;" type="submit">Enviar Email</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div><!-- end copyrights -->
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="{% static 'js/all.js' %}"></script>
+	<!-- Camera Slider -->
+	<script src="{% static 'js/jquery.mobile.customized.min.js' %}"></script>
+	<script src="{% static 'js/jquery.easing.1.3.js' %}"></script> 
+	<script src="{% static 'js/parallaxie.js' %}"></script>
+	<script src="{% static 'js/headline.js' %}"></script>
+	<!-- Contact form JavaScript -->
+    <script src="{% static 'js/jqBootstrapValidation.js' %}"></script>
+    <script src="{% static 'js/contact_me.js' %}"></script>
+    <!-- ALL PLUGINS -->
+    <script src="{% static 'js/custom.js' %}"></script>
+    <script src="{% static 'js/jquery.vide.js' %}"></script>
+	<!-- Carousel -->
+	<script src="{% static 'js/recipeCarousel.js' %}"></script>
+
+</body>
+</html>
