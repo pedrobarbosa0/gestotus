@@ -123,9 +123,11 @@
 									<li>
 										<span class="title-services">{{categoria.nome}}</span>
 										<ul class="sub-services">
+											<div style="width: 120%; background-color: gray;">
 											{% for servico in categoria.servicos.all %}
 												<li>- {{servico.nome}}</li>
 											{% endfor %}
+											</div>
 										</ul>
 									</li>
 								{% endfor %}

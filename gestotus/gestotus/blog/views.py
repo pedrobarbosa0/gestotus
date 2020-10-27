@@ -1,3 +1,16 @@
-from django.shortcuts import render
+from django.views.generic import ListView, DetailView
 
-# Create your views here.
+from .models import Artigo
+
+
+class ArtigosList(ListView):
+    model = Artigo
+    template_name = "artigos/list.html"
+    context_object_name = "artigos"
+    queryset = Artigo.objects.all().order_by("data_criacao")
+
+
+class ArtigosDetailView(DetailView):
+    model = Artigo
+    context_object_name = "artigo"
+    template_name = "artigos/detail.html"
