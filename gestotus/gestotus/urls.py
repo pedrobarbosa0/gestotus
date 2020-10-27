@@ -9,5 +9,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", IndexPortalPublicoView.as_view(), name="index"),
     path("sobre/", SobrePortalPublicoView.as_view(), name="about"),
+    path("drlicitacao/", TemplateView.as_view(template_name="drlicitacao.html"), name="drlicitacao"),
     path("artigos/", include("gestotus.blog.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
