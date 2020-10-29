@@ -13,12 +13,6 @@
     <!-- Site Metas -->
     <title>Gestotus</title>
 	<link rel="icon" href="static/img/head-icon-logo.png" type="image/x-icon">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!--<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png"> -->
 
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Ubuntu:wght@700&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
@@ -44,7 +38,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink" id="mainNav">
       <div class="container" style="text-align: center;">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
-			<img class="img-fluid" src="static/img/logotrns.png" style="width: 230px;" alt="" />
+			<img class="img-fluid" src="{% static 'img/logotrns.png' %}" style="width: 230px;" alt="" />
 		</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
@@ -53,19 +47,18 @@
         <div style="text-align: center;" class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger active" href="#home">Home</a>
+              <a class="nav-link" href="{% url 'index' %}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Serviços</a>
+              <a class="nav-link" href="{% url 'index' %}">Serviços</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#cursos">Cursos</a>
+              <a class="nav-link" href="{% url 'index' %}">Cursos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#blog">Blog</a>
+              <a class="nav-link active" href="#blog">Blog</a>
             </li>
 			<li class="nav-item">
-              {# <a class="nav-link js-scroll-trigger" href="#about">about</a> #}
 			  <a class="nav-link" href="{% url 'about' %}">Sobre Nós</a>
             </li>
           </ul>
@@ -73,28 +66,29 @@
       </div>
     </nav>
 
-	<section id="home" style="background: url('static/img/facebookcover.jpg');">
+	<section id="home" style="background: url({% static 'img/facebookcover.jpg' %});">
 
 	</section>
 
-    <div id="services" class="section wb">
+    <div id="blog" class="section wb">
         <div class="container">
             <div class="section-title text-center">
                 <h3>Artigos</h3>
-                <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.</p>
             </div><!-- end title -->
 
             <div class="row">
                 <div class="col-sm-8">
                     {% for artigo in artigos %}
                         <div class="card-blog grow">
-                            <img src="{{artigo.imagem.url}}" alt="">
-                            <div class="container-card" style="position: relative;">
-                                <div class="date-block">
-                                    <h2>{{artigo.data_criacao|date:"j M Y"}}</h2>
+                            <a href="{% url 'artigos_detail' artigo.id %}" target="_blank">
+                                <img src="{{artigo.imagem.url}}" alt="">
+                                <div class="container-card" style="position: relative;">
+                                    <div class="date-block">
+                                        <h2>{{artigo.data_criacao|date:"j M Y"}}</h2>
+                                    </div>
                                 </div>
-                            </div>
-                            <h1>{{artigo.titulo}}</h1>
+                                <h1>{{artigo.titulo}}</h1>
+                            </a>
                             <p>{{artigo.resumo}}</p>
                         </div>
                         <br><br>
@@ -103,6 +97,43 @@
                 <div class="col-sm-4">
 
                 </div>
+
+                <nav style="margin: 0px auto;">
+                    <ul class="pagination justify-content-center">
+                        {% if page_obj.has_previous %}
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ page_obj.previous_page_number }}" tabindex="-1">
+                                    Anterior
+                                </a>
+                            </li>
+                        {% else %}
+                            <li class="page-item disabled">
+                                <a class="page-link" tabindex="-1">
+                                    Anterior
+                                </a>
+                            </li>
+                        {% endif %}
+                        {% for page in page_obj.paginator.page_range %}
+                            {% if page_obj.number == page %}
+                                <li class="page-item active"><a class="page-link" href="#">{{ page }}</a></li>
+                            {% else %}
+                                <li class="page-item"><a class="page-link" href="?page={{ page }}">{{ page }}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                        {% if page_obj.has_next %}
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ page_obj.next_page_number }}">Próximo</a>
+                            </li>
+                        {% else %}
+                            <li class="page-item disabled">
+                                <a class="page-link" tabindex="-1">
+                                    Próximo
+                                </a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </nav>
+
             </div><!-- end row -->
         </div><!-- end container -->
     </div><!-- end section -->
