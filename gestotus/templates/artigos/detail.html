@@ -1,10 +1,109 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>a</title>
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Site Metas -->
+    <title>{{artigo.titulo}}</title>
+	<link rel="icon" href="static/img/head-icon-logo.png" type="image/x-icon">
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Ubuntu:wght@700&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+	<script src="{% static 'js/modernizr.js' %}"></script> <!-- Modernizr -->
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
-<body>
-{{artigo}}
+<body id="page-top" class="politics_version">
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink" id="mainNav">
+      <div class="container" style="text-align: center;">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+			<img class="img-fluid" src="{% static 'img/logotrns.png' %}" style="width: 230px;" alt="" />
+		</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div style="text-align: center;" class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'index' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'index' %}">Serviços</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'index' %}">Cursos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#blog">Blog</a>
+            </li>
+			<li class="nav-item">
+			  <a class="nav-link" href="{% url 'about' %}">Sobre Nós</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+	<section id="home" style="background: url({{artigo.imagem.url}});">
+	</section>
+
+    <div class="container" style="color: #343a40">
+        {{artigo.data_criacao}}
+        <br>
+        {{artigo.autor}}
+    </div>
+
+    <div id="blog" class="section wb">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>{{artigo.titulo}}</h3>
+                <h4 style="color: gray">{{artigo.resumo}}</h4>
+            </div><!-- end title -->
+
+            <div style="color: #343a40">
+                {{artigo.texto}}
+            </div>
+
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="{% static 'js/all.js' %}"></script>
+	<!-- Camera Slider -->
+	<script src="{% static 'js/jquery.mobile.customized.min.js' %}"></script>
+	<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+	<script src="{% static 'js/parallaxie.js' %}"></script>
+	<script src="{% static 'js/headline.js' %}"></script>
+	<!-- Contact form JavaScript -->
+    <script src="{% static 'js/jqBootstrapValidation.js' %}"></script>
+    <script src="{% static 'js/contact_me.js' %}"></script>
+    <!-- ALL PLUGINS -->
+    <script src="{% static 'js/custom.js' %}"></script>
+    <script src="{% static 'js/jquery.vide.js' %}"></script>
+
 </body>
 </html>
