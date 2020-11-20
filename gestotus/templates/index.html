@@ -180,14 +180,16 @@
 			<div class="cards2">
 				{% for artigo in artigos %}
 					<div class="card-blog grow">
-						<img src="{{artigo.imagem.url}}" alt="">
-						<div class="container-card" style="position: relative;">
-							<div class="date-block">
-								<h2>{{artigo.data_criacao|date:"j M Y"}}</h2>
+						<a href="{% url 'artigos_detail' artigo.id %}" target="_blank">
+							<img src="{{artigo.imagem.url}}" alt="">
+							<div class="container-card" style="position: relative;">
+								<div class="date-block">
+									<h2>{{artigo.data_criacao|date:"j M Y"}}</h2>
+								</div>
 							</div>
-						</div>
-						<h1>{{artigo.titulo}}</h1>
-						<p>{{artigo.resumo}}</p>
+							<h1>{{artigo.titulo}}</h1>
+							<p>{{artigo.resumo}}</p>
+						</a>
 					</div>
 				{% endfor %}
 			</div>

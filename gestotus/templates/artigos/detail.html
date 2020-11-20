@@ -66,10 +66,32 @@
       </div>
     </nav>
 
-	<section id="home" style="background: url({{artigo.imagem.url}});">
-	</section>
+	<section id="home" style="background: url('../static/img/facebookcover.jpg'); background-size: contain; background-repeat: no-repeat;">	</section>
 
-    <div class="container" style="color: #343a40">
+
+  <div class="row justify-content-md-center" style="position: absolute; top: 1;">
+    <div class="col-lg-11">
+      <div class="card-detail">
+        <img src="{{artigo.imagem.url}}" alt="">
+        <div class="container-card" style="position: relative;">
+          <div class="date-block">
+              <h2>{{artigo.data_criacao|date:"j M Y"}}</h2>
+          </div>
+          <div>
+            <h1>{{artigo.titulo}}</h1>
+            <br>
+            {{artigo.autor}}
+          </div>
+        </div>
+        <p>{{artigo.texto}}</p>
+      </div>
+      <br><br>
+    </div>
+  </div>
+
+
+
+    <!-- <div class="container" style="color: #343a40">
         {{artigo.data_criacao}}
         <br>
         {{artigo.autor}}
@@ -80,14 +102,72 @@
             <div class="section-title text-center">
                 <h3>{{artigo.titulo}}</h3>
                 <h4 style="color: gray">{{artigo.resumo}}</h4>
-            </div><!-- end title -->
+            </div>
 
             <div style="color: #343a40">
                 {{artigo.texto}}
             </div>
 
-        </div><!-- end container -->
-    </div><!-- end section -->
+        </div>
+    </div> -->
+
+
+  <div class="copyrights">
+    <div class="container" style="justify-content: center;">
+      <div class="row" style="padding-top: 20px;">
+				<div class="col-md-4">
+					<div class="footer-widget">
+						<div class="footer-logo">
+							<a href="{% url 'index' %}"><img src="{% static 'img/logotrns.png' %}" height="70" width="230" alt="Logo Gestotus"></a>
+						</div>
+						<p style="margin: 13px 0;">Gestão, inovação e inspiração !</p>
+						<ul class="contact-social">
+							<li><div class="grow"><a href="https://www.facebook.com/gestotusconsultoria" target="_blank" class="social-facebook"><i class="fa fa-facebook"></i></a></div></li>
+							<li><div class="grow"><a href="https://twitter.com/gestotus" target="_blank" class="social-twitter"><i class="fa fa-twitter"></i></a></li>
+							<li><div class="grow"><a href="https://www.linkedin.com/company/gestotus-consultoria/" target="_blank" class="social-linkedin"><i class="fa fa-linkedin"></i></a></div></li>
+							<li><div class="grow"><a href="https://www.instagram.com/gestotus/?hl=pt-br" target="_blank" class="social-instagram"><i class="fa fa-instagram"></i></a></div></li>
+							<!-- <li><div class="grow"><a href="#" target="_blank" class="social-whatsapp"><i class="fa fa-whatsapp"></i></a></div></li> -->
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="footer-widget">
+						<h3 style="color: #97989b; font-weight: 600; font-family: Montserrat; font-size: 16px;">Informações para contato</h3>
+						<ul class="contact">
+							<li><i class="fa fa-phone"></i> (82)9.9690-4908 </li>
+							<li><i class="fa fa-envelope"></i> <a href="#" style="color: #97989b;">gestotusconsultoria@gmail.com</a></li>
+							<li><i class="fa fa-map-marker"></i> Maceió-Al, Brasil</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="footer-widget">
+						<h3 style="color: #97989b; font-weight: 600; font-family: Montserrat; font-size: 16px; padding-bottom: 16px;">Envie-nos um email</h3>
+						<form>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group" style="margin-bottom: 0.8rem;">
+										<input class="input" type="email" name="email" placeholder="Seu Email" style="background-color: #353535; border: none; border-radius: 6px;">
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group" style="margin-bottom: 0.8rem;">
+										<input class="input" type="text" name="subject" placeholder="Assunto" style="background-color: #353535; border: none; border-radius: 6px;">
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group" style="margin-bottom: 0.8rem;">
+										<textarea class="input" name="message" placeholder="Messagem" style="background-color: #353535; border: none; border-radius: 6px;"></textarea>
+									</div>
+									<button id="sendMessageButton" class="sim-btn hvr-bounce-to-top" style="padding: 7px 20px; border-radius: 6px;" type="submit">Enviar Email</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+    </div>
+  </div><!-- end copyrights -->
 
     <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
 
