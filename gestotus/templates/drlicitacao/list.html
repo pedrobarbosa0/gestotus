@@ -63,77 +63,75 @@
       </div>
     </nav>
 
-	<section id="home">
-        <div class="drlicitacao section">
-            <img src="../static/img/doutor-licitacao-logo.png" alt="Doutor Licitação">
-            <div class="col-8" style="width: 500px; height: 300px; display: inline-grid; justify-content: center; align-items: center;">
-                <div class="drlicitacao-texts" style="max-width: none;">
-                    <h4>O que você está procurando ?</h4>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Selecione uma categoria
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <form method="get">
-                                    {% for categoria in categorias %}
-                                        <button type="submit" class="dropdown-item" name="q" value="{{categoria}}">
-                                            {{categoria}}
-                                        </button>
-                                    {% endfor %}
-                                </form>
-                            </div>
+    <div class="drlicitacao section">
+        <img src="../static/img/doutor-licitacao-logo.png" alt="Doutor Licitação">
+        <div class="col-8" style="width: 500px; height: 300px; display: inline-grid; justify-content: center; align-items: center;">
+            <div class="drlicitacao-texts" style="max-width: none;">
+                <h4>O que você está procurando ?</h4>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Selecione uma categoria
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <form method="get">
+                                {% for categoria in categorias %}
+                                    <button type="submit" class="dropdown-item" name="q" value="{{categoria}}">
+                                        {{categoria}}
+                                    </button>
+                                {% endfor %}
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="section wb">
-            <div class="container text-center">
-                <h1>Links</h1>
-                {% for link in links %}
-                    <a href="{{link.url}}" target="_blank">{{link.titulo}}</a><br>
-                {% endfor %}
-            </div>
-            <nav style="margin: 0px auto;">
-                <ul class="pagination justify-content-center">
-                    {% if page_obj.has_previous %}
-                        <li class="page-item">
-                            <a class="page-link" href="?page={{ page_obj.previous_page_number }}" tabindex="-1">
-                                Anterior
-                            </a>
-                        </li>
-                    {% else %}
-                        <li class="page-item disabled">
-                            <a class="page-link" tabindex="-1">
-                                Anterior
-                            </a>
-                        </li>
-                    {% endif %}
-                    {% for page in page_obj.paginator.page_range %}
-                        {% if page_obj.number == page %}
-                            <li class="page-item active"><a class="page-link" href="#">{{ page }}</a></li>
-                        {% else %}
-                            <li class="page-item"><a class="page-link" href="?page={{ page }}">{{ page }}</a></li>
-                        {% endif %}
-                    {% endfor %}
-                    {% if page_obj.has_next %}
-                        <li class="page-item">
-                            <a class="page-link" href="?page={{ page_obj.next_page_number }}">Próximo</a>
-                        </li>
-                    {% else %}
-                        <li class="page-item disabled">
-                            <a class="page-link" tabindex="-1">
-                                Próximo
-                            </a>
-                        </li>
-                    {% endif %}
-                </ul>
-            </nav>
+    </div>
+    <div class="section wb">
+        <div class="container text-center">
+            <h1>Links</h1>
+            {% for link in links %}
+                <a href="{{link.url}}" target="_blank">{{link.titulo}}</a><br>
+            {% endfor %}
         </div>
-	</section>
+        <nav style="margin: 0px auto;">
+            <ul class="pagination justify-content-center">
+                {% if page_obj.has_previous %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ page_obj.previous_page_number }}" tabindex="-1">
+                            Anterior
+                        </a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                        <a class="page-link" tabindex="-1">
+                            Anterior
+                        </a>
+                    </li>
+                {% endif %}
+                {% for page in page_obj.paginator.page_range %}
+                    {% if page_obj.number == page %}
+                        <li class="page-item active"><a class="page-link" href="#">{{ page }}</a></li>
+                    {% else %}
+                        <li class="page-item"><a class="page-link" href="?page={{ page }}">{{ page }}</a></li>
+                    {% endif %}
+                {% endfor %}
+                {% if page_obj.has_next %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ page_obj.next_page_number }}">Próximo</a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                        <a class="page-link" tabindex="-1">
+                            Próximo
+                        </a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
 
     <div class="copyrights">
         <div class="container" style="justify-content: center;">

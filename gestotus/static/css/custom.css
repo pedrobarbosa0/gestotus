@@ -249,7 +249,7 @@
   .date-block {
     position: absolute;
     bottom: 90px;
-    right: 70%;
+    left: -15px;
     background: rgba(125, 58, 60, 0.9);
     color: white;
     padding-left: 20px;
