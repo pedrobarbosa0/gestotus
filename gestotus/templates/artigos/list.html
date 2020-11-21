@@ -77,7 +77,7 @@
             </div><!-- end title -->
 
             <div class="row">
-                <div class="col-sm-8">
+                <div class="col-sm-12">
                     {% for artigo in artigos %}
                         <div class="card-blog grow">
                             <a href="{% url 'artigos_detail' artigo.id %}" target="_blank">
@@ -93,9 +93,6 @@
                         </div>
                         <br><br>
                     {% endfor %}
-                </div>
-                <div class="col-sm-4">
-
                 </div>
 
                 <nav style="margin: 0px auto;">

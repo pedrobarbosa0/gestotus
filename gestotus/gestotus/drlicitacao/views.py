@@ -18,5 +18,6 @@ class DrLicitacaoListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        context["categoria_selecionada"] = self.request.GET.get("q")
         context["categorias"] = Categoria.objects.all()
         return context
