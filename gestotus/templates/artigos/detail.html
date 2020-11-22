@@ -11,8 +11,8 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <!-- Site Metas -->
-    <title>{{artigo.titulo}}</title>
-	<link rel="icon" href="static/img/head-icon-logo.png" type="image/x-icon">
+    <title>Gestotus - {{artigo.titulo}}</title>
+	<link rel="icon" href="../static/img/head-icon-logo.png" type="image/x-icon">
 
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Ubuntu:wght@700&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
@@ -56,7 +56,7 @@
               <a class="nav-link" href="{% url 'index' %}">Cursos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#blog">Blog</a>
+              <a class="nav-link active" href="{% url 'artigos_list' %}">Blog</a>
             </li>
 			<li class="nav-item">
 			  <a class="nav-link" href="{% url 'about' %}">Sobre Nós</a>
@@ -74,14 +74,13 @@
     <div class="col-lg-11">
       <div class="card-detail">
         <img src="{{artigo.imagem.url}}" alt="">
+        <div class="date-block-detail">
+            <h2>{{artigo.data_criacao|date:"j M Y"}}</h2>
+        </div>
         <div class="container-card" style="position: relative;">
-          <div class="date-block">
-              <h2>{{artigo.data_criacao|date:"j M Y"}}</h2>
-          </div>
-          <div>
+          <div class="container">
             <h1>{{artigo.titulo}}</h1>
-            <br>
-            {{artigo.autor}}
+            <h3>  por <b>{{artigo.autor}}</b></h3>
           </div>
         </div>
         <p>{{artigo.texto}}</p>

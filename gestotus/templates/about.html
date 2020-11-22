@@ -71,14 +71,16 @@
               <a class="nav-link js-scroll-trigger" href="#membros">Membros</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#blog">Blog</a>
+              <a class="nav-link js-scroll-trigger" href="{% url 'artigos_list' %}">Blog</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 	
-	<section id="home" style="background: url('../static/img/facebookcover.jpg'); background-size: contain; background-repeat: no-repeat;">	</section>
+	<section id="home">
+		<img src="../static/img/facebookcover.jpg" alt="" style="object-fit: cover!important;height: unset;width: 100%;background-position: center;margin-top: 75px;">
+	</section>
 
     <div id="about" class="section lb">
         <div class="container">

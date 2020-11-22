@@ -82,7 +82,8 @@
       </div>
     </nav>
 	
-	<section id="home" style="background: url('static/img/facebookcover.jpg');">
+	<section id="home">
+		<img src="static/img/facebookcover.jpg" alt="" style="object-fit: cover!important;height: unset;width: 100%;background-position: center;margin-top: 75px;">
 		<!--<div class="heading">
 			<h1>Welcome to OnNext</h1>			
 			<h3 class="cd-headline clip is-full-width">
@@ -166,7 +167,9 @@
 					</div>
 				{% endfor %}
 			</div>
-			<a href="/blog" class="sim-btn hvr-bounce-to-top" style="margin: 40px 465px 0px 465px; padding: 8px 60px; border-radius: 6px;"><span>Ver Mais</span></a>
+			<div class="col-lg-12 text-center">
+				<a href="/blog" class="sim-btn hvr-bounce-to-top" style="margin-top: 40px; padding: 8px 60px; border-radius: 6px;"><span>Ver Mais</span></a>
+			</div>
 		</div>
 	</div>
 	
@@ -193,9 +196,9 @@
 					</div>
 				{% endfor %}
 			</div>
-
-			<a href="{% url 'artigos_list' %}" class="sim-btn hvr-bounce-to-top" style="margin: 40px 465px 0px 465px; padding: 8px 60px; border-radius: 6px;"><span>Ver Mais</span></a>
-
+			<div class="col-lg-12 text-center">
+				<a href="{% url 'artigos_list' %}" class="sim-btn hvr-bounce-to-top" style="margin-top: 40px; padding: 8px 60px; border-radius: 6px;"><span>Ver Mais</span></a>
+			</div>
 			<!-- <div class="row">
 				<div class="col-md-4 col-sm-6 col-lg-4">
 					<div class="post-box">

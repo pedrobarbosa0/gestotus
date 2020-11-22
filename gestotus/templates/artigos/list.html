@@ -12,7 +12,7 @@
 
     <!-- Site Metas -->
     <title>Gestotus</title>
-	<link rel="icon" href="static/img/head-icon-logo.png" type="image/x-icon">
+	<link rel="icon" href="../static/img/head-icon-logo.png" type="image/x-icon">
 
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Ubuntu:wght@700&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
@@ -66,8 +66,8 @@
       </div>
     </nav>
 
-	<section id="home" style="background: url({% static 'img/facebookcover.jpg' %});">
-
+	<section id="home">
+		<img src="../static/img/facebookcover.jpg" alt="" style="object-fit: cover!important;height: unset;width: 100%;background-position: center;margin-top: 75px;">
 	</section>
 
     <div id="blog" class="section wb">
@@ -78,21 +78,24 @@
 
             <div class="row">
                 <div class="col-sm-12">
-                    {% for artigo in artigos %}
-                        <div class="card-blog grow">
-                            <a href="{% url 'artigos_detail' artigo.id %}" target="_blank">
-                                <img src="{{artigo.imagem.url}}" alt="">
-                                <div class="container-card" style="position: relative;">
-                                    <div class="date-block">
-                                        <h2>{{artigo.data_criacao|date:"j M Y"}}</h2>
+                    <div class="cards2">
+                        {% for artigo in artigos %}
+                            <div class="card-blog grow">
+                                <a href="{% url 'artigos_detail' artigo.id %}" target="_blank">
+                                    <img src="{{artigo.imagem.url}}" alt="">
+                                    <div class="container-card" style="position: relative;">
+                                        <div class="date-block">
+                                            <h2>{{artigo.data_criacao|date:"j M Y"}}</h2>
+                                        </div>
                                     </div>
-                                </div>
-                                <h1>{{artigo.titulo}}</h1>
-                            </a>
-                            <p>{{artigo.resumo}}</p>
-                        </div>
-                        <br><br>
-                    {% endfor %}
+                                    <h1>{{artigo.titulo}}</h1>
+                                </a>
+                                <p>{{artigo.resumo}}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <br>
+                    <br>
                 </div>
 
                 <nav style="margin: 0px auto;">
