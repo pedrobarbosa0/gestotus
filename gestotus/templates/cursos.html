@@ -1,0 +1,213 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Site Metas -->
+    <title>Gestotus</title>
+	<link rel="icon" href="../static/img/head-icon-logo.png" type="image/x-icon">
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Ubuntu:wght@700&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+	<script src="{% static 'js/modernizr.js' %}"></script> <!-- Modernizr -->
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body id="page-top" class="politics_version">
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink" id="mainNav">
+      <div class="container" style="text-align: center;">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+			<img class="img-fluid" src="{% static 'img/logotrns.png' %}" style="width: 230px;" alt="" />
+		</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div style="text-align: center;" class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'index' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'index' %}">Serviços</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#cursos">Cursos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="{% url 'artigos_list' %}">Blog</a>
+            </li>
+			<li class="nav-item">
+			  <a class="nav-link" href="{% url 'about' %}">Sobre Nós</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+	<section id="home">
+		<img src="../static/img/facebookcover.jpg" alt="" style="object-fit: cover!important;height: unset;width: 100%;background-position: center;margin-top: 75px;">
+	</section>
+
+    <div id="cursos" class="section wb">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>Cursos</h3>
+            </div><!-- end title -->
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="cards">
+				        {% for curso in cursos %}
+                            <div class="card3 grow">
+                                <img src="{{curso.imagem.url}}" alt="">
+                                <h1>{{curso.titulo}}</h1>
+                                <p>{{curso.descricao}}</p>
+                                <div style="justify-content: center; display: flex; padding: 0;">
+                                    <a target="_blank" href="{{curso.link}}" class="sim-btn hvr-bounce-to-top" style="width: 100%; border-radius: 0px 0px 12px 12px; padding: 12px 20px;"><span>Inscreva-se</span></a>
+                                </div>
+                            </div>
+				        {% endfor %}
+			        </div>
+                    <br>
+                    <br>
+                </div>
+
+                <nav style="margin: 0px auto;">
+                    <ul class="pagination justify-content-center">
+                        {% if page_obj.has_previous %}
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ page_obj.previous_page_number }}" tabindex="-1">
+                                    Anterior
+                                </a>
+                            </li>
+                        {% else %}
+                            <li class="page-item disabled">
+                                <a class="page-link" tabindex="-1">
+                                    Anterior
+                                </a>
+                            </li>
+                        {% endif %}
+                        {% for page in page_obj.paginator.page_range %}
+                            {% if page_obj.number == page %}
+                                <li class="page-item active"><a class="page-link" href="#">{{ page }}</a></li>
+                            {% else %}
+                                <li class="page-item"><a class="page-link" href="?page={{ page }}">{{ page }}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                        {% if page_obj.has_next %}
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ page_obj.next_page_number }}">Próximo</a>
+                            </li>
+                        {% else %}
+                            <li class="page-item disabled">
+                                <a class="page-link" tabindex="-1">
+                                    Próximo
+                                </a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </nav>
+
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+
+    <div class="copyrights">
+        <div class="container" style="justify-content: center;">
+        	<div class="row" style="padding-top: 20px;">
+				<div class="col-md-4">
+					<div class="footer-widget">
+						<div class="footer-logo">
+							<a href="{% url 'index' %}"><img src="{% static 'img/logotrns.png' %}" height="70" width="230" alt="Logo Gestotus"></a>
+						</div>
+						<p style="margin: 13px 0;">Gestão, inovação e inspiração !</p>
+						<ul class="contact-social">
+							<li><div class="grow"><a href="https://www.facebook.com/gestotusconsultoria" target="_blank" class="social-facebook"><i class="fa fa-facebook"></i></a></div></li>
+							<li><div class="grow"><a href="https://twitter.com/gestotus" target="_blank" class="social-twitter"><i class="fa fa-twitter"></i></a></li>
+							<li><div class="grow"><a href="https://www.linkedin.com/company/gestotus-consultoria/" target="_blank" class="social-linkedin"><i class="fa fa-linkedin"></i></a></div></li>
+							<li><div class="grow"><a href="https://www.instagram.com/gestotus/?hl=pt-br" target="_blank" class="social-instagram"><i class="fa fa-instagram"></i></a></div></li>
+							<!-- <li><div class="grow"><a href="#" target="_blank" class="social-whatsapp"><i class="fa fa-whatsapp"></i></a></div></li> -->
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="footer-widget">
+						<h3 style="color: #97989b; font-weight: 600; font-family: Montserrat; font-size: 16px;">Informações para contato</h3>
+						<ul class="contact">
+							<li><i class="fa fa-phone"></i> (82)9.9690-4908 </li>
+							<li><i class="fa fa-envelope"></i> <a href="#" style="color: #97989b;">gestotusconsultoria@gmail.com</a></li>
+							<li><i class="fa fa-map-marker"></i> Maceió-Al, Brasil</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="footer-widget">
+						<h3 style="color: #97989b; font-weight: 600; font-family: Montserrat; font-size: 16px; padding-bottom: 16px;">Envie-nos um email</h3>
+						<form>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group" style="margin-bottom: 0.8rem;">
+										<input class="input" type="email" name="email" placeholder="Seu Email" style="background-color: #353535; border: none; border-radius: 6px;">
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group" style="margin-bottom: 0.8rem;">
+										<input class="input" type="text" name="subject" placeholder="Assunto" style="background-color: #353535; border: none; border-radius: 6px;">
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group" style="margin-bottom: 0.8rem;">
+										<textarea class="input" name="message" placeholder="Messagem" style="background-color: #353535; border: none; border-radius: 6px;"></textarea>
+									</div>
+									<button id="sendMessageButton" class="sim-btn hvr-bounce-to-top" style="padding: 7px 20px; border-radius: 6px;" type="submit">Enviar Email</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div><!-- end copyrights -->
+
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="{% static 'js/all.js' %}"></script>
+	<!-- Camera Slider -->
+	<script src="{% static 'js/jquery.mobile.customized.min.js' %}"></script>
+	<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+	<script src="{% static 'js/parallaxie.js' %}"></script>
+	<script src="{% static 'js/headline.js' %}"></script>
+	<!-- Contact form JavaScript -->
+    <script src="{% static 'js/jqBootstrapValidation.js' %}"></script>
+    <script src="{% static 'js/contact_me.js' %}"></script>
+    <!-- ALL PLUGINS -->
+    <script src="{% static 'js/custom.js' %}"></script>
+    <script src="{% static 'js/jquery.vide.js' %}"></script>
+
+</body>
+</html>
