@@ -5,7 +5,6 @@ from django.urls import path, include
 
 from .drlicitacao.views import DrLicitacaoListView
 from .portal_publico.views import IndexPortalPublicoView, SobrePortalPublicoView
-from .cursos.views import
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -13,5 +12,5 @@ urlpatterns = [
     path("sobre/", SobrePortalPublicoView.as_view(), name="about"),
     path("drlicitacao/", DrLicitacaoListView.as_view(), name="drlicitacao"),
     path("artigos/", include("gestotus.blog.urls")),
-    path("cursos/",)
+    path("cursos/", include("gestotus.cursos.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

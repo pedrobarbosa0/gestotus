@@ -146,7 +146,7 @@
 			<h2>Posso te Ajudar ?</h2>
 			<h4>Procurando ajuda para achar a licitacão ou serviço que precisa ?</h4>
 		</div>
-		<a href="/drlicitacao" class="sim-btn hvr-bounce-to-top" style="margin: 0 20px 0 20px;padding: 8px 60px; border-radius: 6px;"><span>Saiba Mais</span></a>
+		<a href="{% url 'drlicitacao' %}" class="sim-btn hvr-bounce-to-top" style="margin: 0 20px 0 20px;padding: 8px 60px; border-radius: 6px;"><span>Saiba Mais</span></a>
 	</div>
 	
 	<div id="cursos" class="section lb">
@@ -168,7 +168,7 @@
 				{% endfor %}
 			</div>
 			<div class="col-lg-12 text-center">
-				<a href="/blog" class="sim-btn hvr-bounce-to-top" style="margin-top: 40px; padding: 8px 60px; border-radius: 6px;"><span>Ver Mais</span></a>
+				<a href="{% url 'cursos_list' %}" class="sim-btn hvr-bounce-to-top" style="margin-top: 40px; padding: 8px 60px; border-radius: 6px;"><span>Ver Mais</span></a>
 			</div>
 		</div>
 	</div>
