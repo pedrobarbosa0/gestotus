@@ -311,7 +311,7 @@ a img.aligncenter {
 .navbar-dark .navbar-nav .nav-link{
 	color: #ffffff;
 	letter-spacing: 1px;
-	font-size: 14px;
+	font-size: 15px;
 	position: relative;
 	text-transform: capitalize;
 }
@@ -359,9 +359,9 @@ a img.aligncenter {
 	color: #ffffff;
 } */
 
-#mainNav.navbar-shrink .navbar-brand img{
+/* #mainNav.navbar-shrink .navbar-brand img{
 	max-width: 130px;
-}
+} */
 
 
 /*------------------------------------------------------------------
@@ -685,6 +685,7 @@ xclip
 
 .title-services{
     font-size: 16px;
+    font-weight: 500;
 }
 
 .title-services:hover{
